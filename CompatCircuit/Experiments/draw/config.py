@@ -1,0 +1,1 @@
+SAVE_FIG_FORMAT = 'pgf' # pdf or pgf

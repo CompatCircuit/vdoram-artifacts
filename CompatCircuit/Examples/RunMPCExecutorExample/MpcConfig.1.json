@@ -1,0 +1,12 @@
+{
+  "party_ip_addresses": [
+    "127.0.0.100",
+    "127.0.0.101"
+  ],
+  "my_ip_address": "127.0.0.101",
+  "my_id": 1,
+  "data_port": 12400,
+  "maximum_bytes_length": 256,
+  "tick_ms": 0,
+  "timeout_ms": 1000
+}

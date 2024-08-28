@@ -1,0 +1,40 @@
+{
+  "profiles": {
+    "GenConfigExample": {
+      "commandName": "Project",
+      "commandLineArgs": "gen-config-example --parties 2"
+    },
+    "Exp1-PrepareFiles": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-prepare-files"
+    },
+    "Exp1-DistributeFiles": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-distribute-files"
+    },
+    "Exp1-RunSingle": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-run-single"
+    },
+    "Exp1-RunMpcThread": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-run-mpc-thread"
+    },
+    "Exp1-RunMpc0": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-run-mpc --party 0"
+    },
+    "Exp1-RunMpc1": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-1-run-mpc --party 1"
+    },
+    "Exp2": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-2-gen-zk-program-instance"
+    },
+    "Exp3": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-3-gen-zk-program-instance"
+    }
+  }
+}

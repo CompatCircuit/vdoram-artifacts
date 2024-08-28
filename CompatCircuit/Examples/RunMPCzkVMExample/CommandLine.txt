@@ -1,0 +1,5 @@
+SadPencil.CompatCircuitCore gen-preshared --directory . --parties 2 --field-beaver-triples 1000000 --bool-beaver-triples 1000000 --edaBits-pair 1000 --daBitPrioPlus-pair 100000
+
+SadPencil.CollaborativeZkVm run-mpc-zkvm --config MpcConfig.0.json --program-instance NumberComparison.instance.0.json --field-beaver FieldBeaver.0.bin --bool-beaver BoolBeaver.0.bin --edaBits edaBits.0.bin --daBitPrioPlus daBitPrioPlus.0.bin --output-folder .
+
+SadPencil.CollaborativeZkVm run-mpc-zkvm --config MpcConfig.1.json --program-instance NumberComparison.instance.1.json --field-beaver FieldBeaver.1.bin --bool-beaver BoolBeaver.1.bin --edaBits edaBits.1.bin --daBitPrioPlus daBitPrioPlus.1.bin --output-folder .

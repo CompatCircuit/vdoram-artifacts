@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Generate-BitDecompositionProofCircuit": {
+      "commandName": "Project",
+      "commandLineArgs": "generate-bit-decomposition-proof-circuit --output-folder ."
+    }
+  }
+}

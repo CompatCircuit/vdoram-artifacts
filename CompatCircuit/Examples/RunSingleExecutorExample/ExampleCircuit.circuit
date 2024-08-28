@@ -1,0 +1,34 @@
+; const 0 = 0;
+; const 1 = -1;
+; const 2 = 1;
+; const 3..254 from 2^{id-2};
+; const 255 = 11; (quadratic nonresidue)
+; const 256 = -11;
+reserved 0 .. 256;
+const 257 .. 258;
+pubin 259 .. 259;
+privin 260 .. 261;
+total 521;
+
+; output 265 = a * b + c * (d + e) + 4
+const 257 = 114514 ; a
+const 258 = 1919810 ; d
+; pubin 259 ; b (input: 114)
+; privin 260 ; c (input: 514)
+; privin 261 ; e (input: 1919)
+add 262 = 258 + 261; d + e (answer: 1921729)
+mul 263 = 257 * 259 ; a * b (answer: 13054596)
+mul 264 = 260 * 262 ; c * (d + e)  (answer: 987768706)
+add 265 = 263 + 264; a * b + c * (d + e) (answer: 1000823302)
+output 265;
+
+; output 266 = inverse of output 265
+inv 266 from 265;
+output 266;
+
+; wire 267 is not a public output
+add 267 = 266 + 260;
+
+; output 268 .. 520 = bit decompositions of 267
+bits 268 .. 520 from 267;
+output 268 .. 520;

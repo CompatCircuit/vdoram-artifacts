@@ -1,0 +1,2318 @@
+{
+  "circuit_name": "BitDecompositionProofCircuit",
+  "circuit_wire_symbols": [
+    {
+      "wire_id": 257,
+      "wire_name": "input_field",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 258,
+      "wire_name": "input_bit_0",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 259,
+      "wire_name": "input_bit_1",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 260,
+      "wire_name": "input_bit_2",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 261,
+      "wire_name": "input_bit_3",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 262,
+      "wire_name": "input_bit_4",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 263,
+      "wire_name": "input_bit_5",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 264,
+      "wire_name": "input_bit_6",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 265,
+      "wire_name": "input_bit_7",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 266,
+      "wire_name": "input_bit_8",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 267,
+      "wire_name": "input_bit_9",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 268,
+      "wire_name": "input_bit_10",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 269,
+      "wire_name": "input_bit_11",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 270,
+      "wire_name": "input_bit_12",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 271,
+      "wire_name": "input_bit_13",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 272,
+      "wire_name": "input_bit_14",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 273,
+      "wire_name": "input_bit_15",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 274,
+      "wire_name": "input_bit_16",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 275,
+      "wire_name": "input_bit_17",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 276,
+      "wire_name": "input_bit_18",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 277,
+      "wire_name": "input_bit_19",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 278,
+      "wire_name": "input_bit_20",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 279,
+      "wire_name": "input_bit_21",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 280,
+      "wire_name": "input_bit_22",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 281,
+      "wire_name": "input_bit_23",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 282,
+      "wire_name": "input_bit_24",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 283,
+      "wire_name": "input_bit_25",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 284,
+      "wire_name": "input_bit_26",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 285,
+      "wire_name": "input_bit_27",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 286,
+      "wire_name": "input_bit_28",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 287,
+      "wire_name": "input_bit_29",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 288,
+      "wire_name": "input_bit_30",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 289,
+      "wire_name": "input_bit_31",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 290,
+      "wire_name": "input_bit_32",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 291,
+      "wire_name": "input_bit_33",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 292,
+      "wire_name": "input_bit_34",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 293,
+      "wire_name": "input_bit_35",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 294,
+      "wire_name": "input_bit_36",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 295,
+      "wire_name": "input_bit_37",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 296,
+      "wire_name": "input_bit_38",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 297,
+      "wire_name": "input_bit_39",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 298,
+      "wire_name": "input_bit_40",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 299,
+      "wire_name": "input_bit_41",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 300,
+      "wire_name": "input_bit_42",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 301,
+      "wire_name": "input_bit_43",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 302,
+      "wire_name": "input_bit_44",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 303,
+      "wire_name": "input_bit_45",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 304,
+      "wire_name": "input_bit_46",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 305,
+      "wire_name": "input_bit_47",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 306,
+      "wire_name": "input_bit_48",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 307,
+      "wire_name": "input_bit_49",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 308,
+      "wire_name": "input_bit_50",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 309,
+      "wire_name": "input_bit_51",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 310,
+      "wire_name": "input_bit_52",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 311,
+      "wire_name": "input_bit_53",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 312,
+      "wire_name": "input_bit_54",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 313,
+      "wire_name": "input_bit_55",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 314,
+      "wire_name": "input_bit_56",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 315,
+      "wire_name": "input_bit_57",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 316,
+      "wire_name": "input_bit_58",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 317,
+      "wire_name": "input_bit_59",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 318,
+      "wire_name": "input_bit_60",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 319,
+      "wire_name": "input_bit_61",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 320,
+      "wire_name": "input_bit_62",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 321,
+      "wire_name": "input_bit_63",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 322,
+      "wire_name": "input_bit_64",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 323,
+      "wire_name": "input_bit_65",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 324,
+      "wire_name": "input_bit_66",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 325,
+      "wire_name": "input_bit_67",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 326,
+      "wire_name": "input_bit_68",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 327,
+      "wire_name": "input_bit_69",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 328,
+      "wire_name": "input_bit_70",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 329,
+      "wire_name": "input_bit_71",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 330,
+      "wire_name": "input_bit_72",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 331,
+      "wire_name": "input_bit_73",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 332,
+      "wire_name": "input_bit_74",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 333,
+      "wire_name": "input_bit_75",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 334,
+      "wire_name": "input_bit_76",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 335,
+      "wire_name": "input_bit_77",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 336,
+      "wire_name": "input_bit_78",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 337,
+      "wire_name": "input_bit_79",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 338,
+      "wire_name": "input_bit_80",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 339,
+      "wire_name": "input_bit_81",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 340,
+      "wire_name": "input_bit_82",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 341,
+      "wire_name": "input_bit_83",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 342,
+      "wire_name": "input_bit_84",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 343,
+      "wire_name": "input_bit_85",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 344,
+      "wire_name": "input_bit_86",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 345,
+      "wire_name": "input_bit_87",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 346,
+      "wire_name": "input_bit_88",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 347,
+      "wire_name": "input_bit_89",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 348,
+      "wire_name": "input_bit_90",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 349,
+      "wire_name": "input_bit_91",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 350,
+      "wire_name": "input_bit_92",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 351,
+      "wire_name": "input_bit_93",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 352,
+      "wire_name": "input_bit_94",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 353,
+      "wire_name": "input_bit_95",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 354,
+      "wire_name": "input_bit_96",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 355,
+      "wire_name": "input_bit_97",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 356,
+      "wire_name": "input_bit_98",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 357,
+      "wire_name": "input_bit_99",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 358,
+      "wire_name": "input_bit_100",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 359,
+      "wire_name": "input_bit_101",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 360,
+      "wire_name": "input_bit_102",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 361,
+      "wire_name": "input_bit_103",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 362,
+      "wire_name": "input_bit_104",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 363,
+      "wire_name": "input_bit_105",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 364,
+      "wire_name": "input_bit_106",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 365,
+      "wire_name": "input_bit_107",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 366,
+      "wire_name": "input_bit_108",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 367,
+      "wire_name": "input_bit_109",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 368,
+      "wire_name": "input_bit_110",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 369,
+      "wire_name": "input_bit_111",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 370,
+      "wire_name": "input_bit_112",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 371,
+      "wire_name": "input_bit_113",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 372,
+      "wire_name": "input_bit_114",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 373,
+      "wire_name": "input_bit_115",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 374,
+      "wire_name": "input_bit_116",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 375,
+      "wire_name": "input_bit_117",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 376,
+      "wire_name": "input_bit_118",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 377,
+      "wire_name": "input_bit_119",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 378,
+      "wire_name": "input_bit_120",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 379,
+      "wire_name": "input_bit_121",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 380,
+      "wire_name": "input_bit_122",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 381,
+      "wire_name": "input_bit_123",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 382,
+      "wire_name": "input_bit_124",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 383,
+      "wire_name": "input_bit_125",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 384,
+      "wire_name": "input_bit_126",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 385,
+      "wire_name": "input_bit_127",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 386,
+      "wire_name": "input_bit_128",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 387,
+      "wire_name": "input_bit_129",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 388,
+      "wire_name": "input_bit_130",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 389,
+      "wire_name": "input_bit_131",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 390,
+      "wire_name": "input_bit_132",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 391,
+      "wire_name": "input_bit_133",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 392,
+      "wire_name": "input_bit_134",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 393,
+      "wire_name": "input_bit_135",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 394,
+      "wire_name": "input_bit_136",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 395,
+      "wire_name": "input_bit_137",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 396,
+      "wire_name": "input_bit_138",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 397,
+      "wire_name": "input_bit_139",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 398,
+      "wire_name": "input_bit_140",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 399,
+      "wire_name": "input_bit_141",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 400,
+      "wire_name": "input_bit_142",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 401,
+      "wire_name": "input_bit_143",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 402,
+      "wire_name": "input_bit_144",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 403,
+      "wire_name": "input_bit_145",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 404,
+      "wire_name": "input_bit_146",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 405,
+      "wire_name": "input_bit_147",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 406,
+      "wire_name": "input_bit_148",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 407,
+      "wire_name": "input_bit_149",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 408,
+      "wire_name": "input_bit_150",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 409,
+      "wire_name": "input_bit_151",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 410,
+      "wire_name": "input_bit_152",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 411,
+      "wire_name": "input_bit_153",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 412,
+      "wire_name": "input_bit_154",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 413,
+      "wire_name": "input_bit_155",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 414,
+      "wire_name": "input_bit_156",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 415,
+      "wire_name": "input_bit_157",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 416,
+      "wire_name": "input_bit_158",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 417,
+      "wire_name": "input_bit_159",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 418,
+      "wire_name": "input_bit_160",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 419,
+      "wire_name": "input_bit_161",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 420,
+      "wire_name": "input_bit_162",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 421,
+      "wire_name": "input_bit_163",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 422,
+      "wire_name": "input_bit_164",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 423,
+      "wire_name": "input_bit_165",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 424,
+      "wire_name": "input_bit_166",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 425,
+      "wire_name": "input_bit_167",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 426,
+      "wire_name": "input_bit_168",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 427,
+      "wire_name": "input_bit_169",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 428,
+      "wire_name": "input_bit_170",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 429,
+      "wire_name": "input_bit_171",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 430,
+      "wire_name": "input_bit_172",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 431,
+      "wire_name": "input_bit_173",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 432,
+      "wire_name": "input_bit_174",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 433,
+      "wire_name": "input_bit_175",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 434,
+      "wire_name": "input_bit_176",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 435,
+      "wire_name": "input_bit_177",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 436,
+      "wire_name": "input_bit_178",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 437,
+      "wire_name": "input_bit_179",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 438,
+      "wire_name": "input_bit_180",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 439,
+      "wire_name": "input_bit_181",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 440,
+      "wire_name": "input_bit_182",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 441,
+      "wire_name": "input_bit_183",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 442,
+      "wire_name": "input_bit_184",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 443,
+      "wire_name": "input_bit_185",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 444,
+      "wire_name": "input_bit_186",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 445,
+      "wire_name": "input_bit_187",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 446,
+      "wire_name": "input_bit_188",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 447,
+      "wire_name": "input_bit_189",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 448,
+      "wire_name": "input_bit_190",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 449,
+      "wire_name": "input_bit_191",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 450,
+      "wire_name": "input_bit_192",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 451,
+      "wire_name": "input_bit_193",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 452,
+      "wire_name": "input_bit_194",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 453,
+      "wire_name": "input_bit_195",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 454,
+      "wire_name": "input_bit_196",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 455,
+      "wire_name": "input_bit_197",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 456,
+      "wire_name": "input_bit_198",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 457,
+      "wire_name": "input_bit_199",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 458,
+      "wire_name": "input_bit_200",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 459,
+      "wire_name": "input_bit_201",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 460,
+      "wire_name": "input_bit_202",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 461,
+      "wire_name": "input_bit_203",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 462,
+      "wire_name": "input_bit_204",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 463,
+      "wire_name": "input_bit_205",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 464,
+      "wire_name": "input_bit_206",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 465,
+      "wire_name": "input_bit_207",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 466,
+      "wire_name": "input_bit_208",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 467,
+      "wire_name": "input_bit_209",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 468,
+      "wire_name": "input_bit_210",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 469,
+      "wire_name": "input_bit_211",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 470,
+      "wire_name": "input_bit_212",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 471,
+      "wire_name": "input_bit_213",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 472,
+      "wire_name": "input_bit_214",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 473,
+      "wire_name": "input_bit_215",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 474,
+      "wire_name": "input_bit_216",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 475,
+      "wire_name": "input_bit_217",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 476,
+      "wire_name": "input_bit_218",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 477,
+      "wire_name": "input_bit_219",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 478,
+      "wire_name": "input_bit_220",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 479,
+      "wire_name": "input_bit_221",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 480,
+      "wire_name": "input_bit_222",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 481,
+      "wire_name": "input_bit_223",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 482,
+      "wire_name": "input_bit_224",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 483,
+      "wire_name": "input_bit_225",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 484,
+      "wire_name": "input_bit_226",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 485,
+      "wire_name": "input_bit_227",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 486,
+      "wire_name": "input_bit_228",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 487,
+      "wire_name": "input_bit_229",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 488,
+      "wire_name": "input_bit_230",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 489,
+      "wire_name": "input_bit_231",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 490,
+      "wire_name": "input_bit_232",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 491,
+      "wire_name": "input_bit_233",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 492,
+      "wire_name": "input_bit_234",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 493,
+      "wire_name": "input_bit_235",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 494,
+      "wire_name": "input_bit_236",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 495,
+      "wire_name": "input_bit_237",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 496,
+      "wire_name": "input_bit_238",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 497,
+      "wire_name": "input_bit_239",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 498,
+      "wire_name": "input_bit_240",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 499,
+      "wire_name": "input_bit_241",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 500,
+      "wire_name": "input_bit_242",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 501,
+      "wire_name": "input_bit_243",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 502,
+      "wire_name": "input_bit_244",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 503,
+      "wire_name": "input_bit_245",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 504,
+      "wire_name": "input_bit_246",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 505,
+      "wire_name": "input_bit_247",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 506,
+      "wire_name": "input_bit_248",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 507,
+      "wire_name": "input_bit_249",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 508,
+      "wire_name": "input_bit_250",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 509,
+      "wire_name": "input_bit_251",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 510,
+      "wire_name": "input_bit_252",
+      "is_public_output": false,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": true,
+      "is_constant": false
+    },
+    {
+      "wire_id": 1017,
+      "wire_name": "out_error_if_not_equals",
+      "is_public_output": true,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": false,
+      "is_constant": false
+    },
+    {
+      "wire_id": 1775,
+      "wire_name": "out_error_if_input_bit_out_of_range",
+      "is_public_output": true,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": false,
+      "is_constant": false
+    },
+    {
+      "wire_id": 4557,
+      "wire_name": "out_error_if_overflow",
+      "is_public_output": true,
+      "is_private_output": false,
+      "is_public_input": false,
+      "is_private_input": false,
+      "is_constant": false
+    }
+  ]
+}

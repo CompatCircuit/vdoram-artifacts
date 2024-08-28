@@ -1,0 +1,1 @@
+SadPencil.CompatCircuitCore run-single --circuit ExampleCircuit.circuit --public-input ExamplePublicInput.json --private-input ExamplePrivateInput.json --output ExampleOutput.json

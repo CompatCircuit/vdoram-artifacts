@@ -1,0 +1,6 @@
+*.txt
+*.log
+*.stdout
+*.stderr
+!.gitignore
+!.gitkeep

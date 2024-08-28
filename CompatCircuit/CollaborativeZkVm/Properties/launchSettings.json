@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "Single-zkVm": {
+      "commandName": "Project",
+      "commandLineArgs": "run-single-zkvm --program-instance NumberComparison.instance.0.json --output-folder ."
+    },
+    "MPC-zkVm-Party0": {
+      "commandName": "Project",
+      "commandLineArgs": "run-mpc-zkvm --config MpcConfig.0.json --program-instance NumberComparison.instance.0.json --field-beaver FieldBeaver.0.bin --bool-beaver BoolBeaver.0.bin --edaBits edaBits.0.bin --daBitPrioPlus daBitPrioPlus.0.bin --output-folder ."
+    },
+    "MPC-zkVm-Party1": {
+      "commandName": "Project",
+      "commandLineArgs": "run-mpc-zkvm --config MpcConfig.1.json --program-instance NumberComparison.instance.1.json --field-beaver FieldBeaver.1.bin --bool-beaver BoolBeaver.1.bin --edaBits edaBits.1.bin --daBitPrioPlus daBitPrioPlus.1.bin --output-folder ."
+    },
+    "Fake-Verify": {
+      "commandName": "Project",
+      "commandLineArgs": "run-fake-verify --party-count 2 --input-folder ."
+    },
+    "Generate-SingleParty-zkProgramInstance-Example": {
+      "commandName": "Project",
+      "commandLineArgs": "generate-zk-program-instance-example --party-count 1 --output-folder ."
+    },
+    "Generate-MPC-zkProgramInstance-Example": {
+      "commandName": "Project",
+      "commandLineArgs": "generate-zk-program-instance-example --party-count 2 --output-folder ."
+    }
+  }
+}
