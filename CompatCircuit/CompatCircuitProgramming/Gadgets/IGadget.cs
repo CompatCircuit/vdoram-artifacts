@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public interface IGadget {
     public List<string> GetInputWireNames();
     public List<string> GetOutputWireNames();

@@ -1,7 +1,7 @@
 ﻿using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
 public class NetAckMessagePayload : INetMessagePayload<NetAckMessagePayload> {
     public static byte MessagePayloadTypeID => (byte)NetMessagePayloadType.Ack;
     public required int MessageID { get; init; }

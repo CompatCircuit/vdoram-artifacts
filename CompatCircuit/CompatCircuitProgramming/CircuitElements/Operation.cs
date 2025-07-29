@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public class Operation : object {
     // TODO: this Operation class behaves like CompactCircuitOperation. Find a way to refactor codes without introducing CircuitProgramming into CompatCircuit
     public OperationType OperationType { get; }

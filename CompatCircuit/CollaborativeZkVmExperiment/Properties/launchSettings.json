@@ -35,6 +35,10 @@
     "Exp3": {
       "commandName": "Project",
       "commandLineArgs": "exp-3-gen-zk-program-instance"
+    },
+    "Exp4": {
+      "commandName": "Project",
+      "commandLineArgs": "exp-4-gen-zk-program-instance"
     }
   }
 }

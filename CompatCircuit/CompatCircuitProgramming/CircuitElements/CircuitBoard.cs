@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public class CircuitBoard {
     /// <summary>
     /// This HashSet stores all wires (including operation result wires) to make sure no wires are accidently added twice
@@ -70,6 +70,12 @@ public class CircuitBoard {
         }
     }
 
+    public void AddWires(params Wire[] wires) {
+        foreach (Wire wire in wires) {
+            this.AddWire(wire);
+        }
+    }
+
     public void AddOperation(Operation operation) {
         foreach (Wire wire in operation.InputWires) {
             if (!this.AllWiresHashSet.Contains(wire)) {
@@ -94,6 +100,12 @@ public class CircuitBoard {
         _ = this.AllOperationsHashSet.Add(operation);
         foreach (Wire wire in operation.OutputWires) {
             _ = this.AllWiresHashSet.Add(wire);
+        }
+    }
+
+    public void AddOperations(params Operation[] operations) {
+        foreach (Operation operation in operations) {
+            this.AddOperation(operation);
         }
     }
 

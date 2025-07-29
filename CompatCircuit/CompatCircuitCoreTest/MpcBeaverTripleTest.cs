@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.RandomGenerators;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.RandomGenerators;
 using System.Collections;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 [TestClass]
 public class MpcBeaverTripleTest {
     [TestMethod]

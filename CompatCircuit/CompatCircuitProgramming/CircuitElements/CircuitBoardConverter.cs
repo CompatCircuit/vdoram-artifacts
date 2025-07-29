@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public static class CircuitBoardConverter {
     public static void ToCompatCircuit(CircuitBoard circuitBoard, string circuitName, out CompatCircuit compatCircuit, out CompatCircuitSymbols compatCircuitSymbols)
         => ToCompatCircuit(circuitBoard, circuitName, out compatCircuit, out compatCircuitSymbols, out _);

@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Diagnostics;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Arithmetic;
+namespace Anonymous.CompatCircuitCore.Arithmetic;
 /// <summary>
 /// Field F_p
 /// </summary>

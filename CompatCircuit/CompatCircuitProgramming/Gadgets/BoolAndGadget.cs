@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class BoolAndGadget(int bitCount = 2) : IGadget {
     public int BitCount { get; } = bitCount >= 2 ? bitCount : throw new ArgumentOutOfRangeException(nameof(bitCount), "must be a positive integer and no less than 2");
 

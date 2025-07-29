@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CompatCircuitCore.BinarySerialization;
+namespace Anonymous.CompatCircuitCore.BinarySerialization;
 public interface IArithFactoryBinaryDecodable<T, TArithValue> where T : IArithFactoryBinaryDecodable<T, TArithValue> {
     public static abstract T FromEncodedBytes(ReadOnlySpan<byte> buffer, IArithFactory<TArithValue> factory, out int bytesRead);
 }

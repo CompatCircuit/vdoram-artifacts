@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 public class DummyMpcClient : IMpcClient {
     public event EventHandler<RawMessage>? OnMessageReceived { add { } remove { } } // https://stackoverflow.com/a/3675077
 

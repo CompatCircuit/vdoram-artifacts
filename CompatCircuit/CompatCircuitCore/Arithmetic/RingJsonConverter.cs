@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SadPencil.CompatCircuitCore.Arithmetic;
+namespace Anonymous.CompatCircuitCore.Arithmetic;
 public class RingJsonConverter(BigInteger ringSize) : JsonConverter<Ring> {
     public BigInteger RingSize { get; } = ringSize;
 

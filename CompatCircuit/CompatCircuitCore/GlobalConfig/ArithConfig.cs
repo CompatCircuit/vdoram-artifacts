@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
 using System.Globalization;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.GlobalConfig;
+namespace Anonymous.CompatCircuitCore.GlobalConfig;
 public static class ArithConfig {
     private static BigInteger? _fieldSize = null;
     public static BigInteger FieldSize => _fieldSize ??= BigInteger.Parse("12ab655e9a2ca55660b44d1e5c37b00159aa76fed00000010a11800000000001".ToUpper(), NumberStyles.AllowHexSpecifier); // BLS12-377

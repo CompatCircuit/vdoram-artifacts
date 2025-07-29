@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 [TestClass]
 public class MpcBit2ATest {
     // Note: we implement the Bit2A conversion as follows.

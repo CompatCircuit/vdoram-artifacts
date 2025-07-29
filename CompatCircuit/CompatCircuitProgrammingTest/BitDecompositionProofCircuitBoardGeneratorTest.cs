@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.BitDecompositionProofCircuit;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.BitDecompositionProofCircuit;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgrammingTest;
+namespace Anonymous.CompatCircuitProgrammingTest;
 [TestClass]
 public class BitDecompositionProofCircuitBoardGeneratorTest {
     [TestMethod]

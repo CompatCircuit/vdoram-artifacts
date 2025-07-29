@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers.Binary;
 using System.Collections;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public static class BitArrayHelper {
     public static int BitCountToByteCount(int bitCount) => (bitCount + 7) / 8;
     public static int ByteCount(this BitArray bits) => BitCountToByteCount(bits.Count);

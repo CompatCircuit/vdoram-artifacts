@@ -1,11 +1,11 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 public class UdpMpcClient : IMpcClient, IDisposable {
     public INetClientFactory NetClientFactory { get; set; }
     private INetClient? DataNetClient { get; set; }

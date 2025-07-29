@@ -1,6 +1,6 @@
 ﻿using System.Buffers.Binary;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class PartyOnlineMessagePayload(int partyID) : IMessagePayload<PartyOnlineMessagePayload> {
     public static byte MessagePayloadTypeID => (byte)MessagePayloadType.PartyOnline;
     public int PartyID { get; } = partyID;

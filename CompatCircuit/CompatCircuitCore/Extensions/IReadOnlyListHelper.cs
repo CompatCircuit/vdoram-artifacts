@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Extensions;
+﻿namespace Anonymous.CompatCircuitCore.Extensions;
 public static class IReadOnlyListHelper {
     public static int IndexOf<T>(this IReadOnlyList<T> list, T elementToFind) {
         // https://stackoverflow.com/a/60316143

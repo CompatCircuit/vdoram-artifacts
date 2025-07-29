@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitProgramming.BitDecompositionProofCircuit;
+namespace Anonymous.CompatCircuitProgramming.BitDecompositionProofCircuit;
 public class BitDecompositionProofCircuitBoardGenerator : ICircuitBoardGenerator {
     public CircuitBoard GetCircuitBoard() {
         int bitSize = ArithConfig.BitSize;

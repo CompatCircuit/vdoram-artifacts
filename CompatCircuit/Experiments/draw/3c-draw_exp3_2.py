@@ -160,12 +160,12 @@ if __name__ == "__main__":
     # Adjust y-ticks to be placed at the center of grouped bars
     ax.set_yticks([p + 2 * width for p in positions])
     ax.set_yticklabels(parties)
-    ax.set_xscale("log", base=2)
+    ax.set_xscale("log", base=10)
     ax.set_xlim(right=max_mean_value * 4)
     # ax.set_xlim(0, math.log2(max_mean_value))
     ax.invert_yaxis()  # Invert y-axis to have "single" at the top
     ax.set_xlabel("Time cost (s)", fontsize=SMALL_SIZE)
-    ax.set_ylabel("Party count", fontsize=SMALL_SIZE)
+    ax.set_ylabel("Prover count", fontsize=SMALL_SIZE)
     # ax.set_title("Performance Metrics Across Different Party Settings and Methods")
 
     ax.legend(

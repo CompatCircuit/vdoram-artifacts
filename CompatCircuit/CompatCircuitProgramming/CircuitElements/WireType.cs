@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public enum WireType : byte {
     Constant,
     PublicInput,

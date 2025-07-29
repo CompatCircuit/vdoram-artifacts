@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class FieldSubGadget : IGadget {
     public List<string> GetInputWireNames() => ["minuend", "subtrahend"];
     public List<string> GetOutputWireNames() => ["difference"];

@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 [TestClass]
 public class JsonSerializationTest {
     [TestMethod]

@@ -1,29 +1,30 @@
-﻿using SadPencil.CollaborativeZkVm.ZkPrograms;
-using SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
-using SadPencil.CollaborativeZkVmExperiment.ExperimentConfigs;
-using SadPencil.CollaborativeZkVmExperiment.ExperimentOneExecutors;
-using SadPencil.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
-using SadPencil.CollaborativeZkVmExperiment.ExperimentTwoThreeZkPrograms;
-using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.Computation.SingleParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
-using SadPencil.CompatCircuitCore.RandomGenerators;
-using SadPencil.CompatCircuitCore.SerilogHelpers;
+﻿using Anonymous.CollaborativeZkVm.ZkPrograms;
+using Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
+using Anonymous.CollaborativeZkVmExperiment.ExperimentConfigs;
+using Anonymous.CollaborativeZkVmExperiment.ExperimentFourZkPrograms;
+using Anonymous.CollaborativeZkVmExperiment.ExperimentOneExecutors;
+using Anonymous.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
+using Anonymous.CollaborativeZkVmExperiment.ExperimentTwoThreeZkPrograms;
+using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.Computation.SingleParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+using Anonymous.CompatCircuitCore.RandomGenerators;
+using Anonymous.CompatCircuitCore.SerilogHelpers;
 using Serilog;
 using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Diagnostics;
 using System.Net;
-using Startup = SadPencil.CollaborativeZkVmExperiment.Startup;
+using Startup = Anonymous.CollaborativeZkVmExperiment.Startup;
 
 // _ = Trace.Listeners.Add(new ConsoleTraceListener(true));
 _ = Trace.Listeners.Add(new SerilogTraceListener.SerilogTraceListener());
@@ -210,13 +211,19 @@ Command ExperimentOneDistributeFilesCommand() {
 }
 
 Command ExperimentOneRunSinglePartyCommand() {
-    Command command = new("exp-1-run-single", "Run Experiment 1 as single party");
+    Option<bool> repeatPresharedOption = new(name: "--unsafe-repeat-preshared", description: "Repeatly use preshared values. This is extremely unsafe and only meant for debugging or evaluation purpose.", getDefaultValue: () => false) { IsRequired = false };
+
+    Command command = new("exp-1-run-single", "Run Experiment 1 as single party") { repeatPresharedOption };
 
     async Task Handle(InvocationContext invocationContext) {
+        bool repeatPreshared = invocationContext.ParseResult.GetValueForOption(repeatPresharedOption)!;
+
         Serilog.Log.Information("Preparing...");
 
         ICountingEnumerator<Field> publicInputEnumerator = GetPublicInputEnumerator();
-        // TODO: if repeatPreshared, warp publicInputEnumerator with a RepeatingEnumerator
+        if (repeatPreshared) {
+            publicInputEnumerator = new CountingEnumerator<Field>(new RepeatingEnumerator<Field>(publicInputEnumerator));
+        }
 
         IMpcExecutorFactory mpcExecutorFactory = new SingleExecutorFactory();
 
@@ -474,6 +481,38 @@ Command ExperimentTwoGenerateZkProgramInstanceCommand() {
     return command;
 }
 
+Command ExperimentFourGenerateZkProgramInstanceCommand() {
+    Command command = new("exp-4-gen-zk-program-instance", "Generate zero-knowledge program instances for Experiment 4");
+
+    void Handle() {
+        ExperimentConfig expConfig = GetExperimentConfig();
+        int partyCount = expConfig.PartyIPAddresses.Count;
+
+        List<IZkProgramExampleGenerator> programGenerators = [
+            new ExperimentFourZkProgramBubbleSortGenerator(),
+            new ExperimentFourZkProgramFibonacciGenerator(),
+            new ExperimentFourZkProgramIncreasingSubsequenceGenerator(),
+            new ExperimentFourZkProgramRangeQueryGenerator(),
+            new ExperimentFourZkProgramSlidingWindowGenerator(),
+            new ExperimentFourZkProgramBinarySearchGenerator(),
+            new ExperimentFourZkProgramSetIntersecionGenerator()
+        ];
+        Dictionary<string, ZkProgramExample> examples = programGenerators.Select(generator => generator.GetZkProgram()).Select(program => (program.Name, program)).ToDictionary(); ;
+
+        foreach ((_, ZkProgramExample zkProgramExample) in examples) {
+            List<ZkProgramInstance> programInstances = zkProgramExample.GetZkProgramInstances(partyCount);
+
+            for (int partyIndex = 0; partyIndex < partyCount; partyIndex++) {
+                ZkProgramInstance programInstance = programInstances[partyIndex];
+                using Stream stream = File.Open($"{zkProgramExample.CodeName}.instance.{partyIndex}.json", FileMode.Create, FileAccess.Write);
+                JsonSerializerHelper.Serialize(stream, programInstance, JsonConfig.JsonSerializerOptions);
+            }
+        }
+    }
+    command.SetHandler(Handle);
+    return command;
+}
+
 Command ExperimentThreeGenerateZkProgramInstanceCommand() {
     Command command = new("exp-3-gen-zk-program-instance", "Generate zero-knowledge program instances for Experiment 3");
 
@@ -560,11 +599,10 @@ Command RunMpcZkVmCommand() {
             MyID = mpcConfig.MyID,
             MpcExecutorFactory = mpcExecutorFactory,
             IsSingleParty = false,
-            OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(arg => {
-                (string name, R1csCircuitWithValues r1cs) = arg;
+            OnR1csCircuitWithValuesGeneratedAsync = (string name, R1csCircuitWithValues r1cs) => {
                 using Stream stream = File.Open($"{instanceName}.{name}.party{mpcConfig.MyID}.r1cs.json", FileMode.Create, FileAccess.Write);
                 JsonSerializerHelper.Serialize(stream, r1cs, JsonConfig.JsonSerializerOptions);
-            }),
+            },
         };
 
         try {
@@ -675,11 +713,10 @@ Command RunMpcZkVmInThreadCommand() {
                 MpcExecutorFactory = mpcExecutorFactory,
                 IsSingleParty = false,
                 ZkProgramInstance = programInstance,
-                OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(arg => {
-                    (string name, R1csCircuitWithValues r1cs) = arg;
+                OnR1csCircuitWithValuesGeneratedAsync = (string name, R1csCircuitWithValues r1cs) => {
                     using Stream stream = File.Open($"{instanceName}.{name}.party{myIDCaptured}.r1cs.json", FileMode.Create, FileAccess.Write);
                     JsonSerializerHelper.Serialize(stream, r1cs, JsonConfig.JsonSerializerOptions);
-                }),
+                },
             };
             zkProgramExecutors.Add(zkProgramExecutor);
         }
@@ -809,6 +846,7 @@ try {
         ExperimentOneRunMultiPartyCommand(),
         ExperimentTwoGenerateZkProgramInstanceCommand(),
         ExperimentThreeGenerateZkProgramInstanceCommand(),
+        ExperimentFourGenerateZkProgramInstanceCommand(),
         RunMpcZkVmCommand(),
         RunMpcZkVmInThreadCommand(),
         GeneratePresharedCommand(),

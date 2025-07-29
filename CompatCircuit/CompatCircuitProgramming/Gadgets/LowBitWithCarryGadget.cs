@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class LowBitWithCarryGadget(int bitCount) : IGadget {
     public int BitCount { get; } = bitCount;
     public List<string> GetInputWireNames() => Enumerable.Range(0, this.BitCount).Select(i => $"input_{i}").ToList();

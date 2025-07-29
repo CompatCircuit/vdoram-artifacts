@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
-using SadPencil.CompatCircuitCore.RandomGenerators;
+﻿using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
+using Anonymous.CompatCircuitCore.RandomGenerators;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 public class BoolBeaverTripleGenerator {
     public required RandomGeneratorRef RandomGenerator { get; init; }
     public required BoolSecretSharing BoolSecretSharing { get; init; }

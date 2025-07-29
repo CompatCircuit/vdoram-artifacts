@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
+﻿namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
 public static class NetRawMessageHelper {
     public static NetRawMessage ComposeNetRawMessage<T>(int messageID, int senderID, int receiverID, T messagePayload) where T : INetMessagePayload<T> {
         byte[] payloadBytes = new byte[messagePayload.GetEncodedByteCount()];

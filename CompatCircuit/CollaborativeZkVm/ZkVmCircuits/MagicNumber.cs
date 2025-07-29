@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 
-namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 public static class MagicNumber {
     /// <summary>
     /// H(magic, enc_key)

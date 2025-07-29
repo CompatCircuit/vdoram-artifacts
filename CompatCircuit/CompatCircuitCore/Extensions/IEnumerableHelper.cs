@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Extensions;
+﻿namespace Anonymous.CompatCircuitCore.Extensions;
 public static class IEnumerableHelper {
     public static bool IsIncreasingByOne(this IEnumerable<int> numbers) {
         IEnumerator<int> enumerator = numbers.GetEnumerator();

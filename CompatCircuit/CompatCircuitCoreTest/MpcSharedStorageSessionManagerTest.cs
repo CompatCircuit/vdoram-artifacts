@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 [TestClass]
 public class MpcSharedStorageSessionManagerTest {
     [TestMethod]

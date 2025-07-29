@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 public record BoolBeaverTripleShare : IBinaryEncodable, IGeneralBinaryDecodable<BoolBeaverTripleShare>, IEquatable<BoolBeaverTripleShare> {
     public required bool X { get; init; }
     public required bool Y { get; init; }

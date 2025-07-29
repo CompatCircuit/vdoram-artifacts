@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitCore.Computation;
+namespace Anonymous.CompatCircuitCore.Computation;
 public class CircuitExecuteResult {
     public required MpcCircuit MpcCircuit { get; init; }
     public required List<MpcValue?> ValueBoard { get; init; }

@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.RandomGenerators;
+﻿using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.RandomGenerators;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
 /// <summary>
 /// Full threshold secret sharing
 /// </summary>

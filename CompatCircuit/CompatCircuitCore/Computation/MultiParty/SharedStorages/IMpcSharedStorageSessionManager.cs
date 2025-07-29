@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 public interface IMpcSharedStorageSessionManager {
     public void HandleRawMessage(RawMessage message);
     public void RegisterSession(int sessionID, IMpcSharedStorage sharedStorage);

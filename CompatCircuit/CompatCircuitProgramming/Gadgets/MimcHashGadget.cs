@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class MimcHashGadget(int preimageCount, MimcEncryptGadget mimcEncryptGadget) : IGadget {
     public MimcEncryptGadget MimcEncryptGadget { get; } = mimcEncryptGadget;
     public int PreimageCount { get; } = preimageCount > 0 ? preimageCount : throw new ArgumentOutOfRangeException(nameof(preimageCount), "must be a positive integer");

@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 public class DummyCountingMpcClient : IMpcClient {
     private long _totalBytesSent = 0;
     public long TotalBytesSent => this._totalBytesSent;

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
 public record R1csConstraint {
     public required int LeftWire { get; init; }
     public required int RightWire { get; init; }

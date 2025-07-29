@@ -267,3 +267,6 @@ dotnet_style_qualification_for_field = true:suggestion
 dotnet_style_qualification_for_event = true:suggestion
 dotnet_style_qualification_for_method = true:suggestion
 insert_final_newline = true:suggestion
+
+# CA1806: Do not ignore method results
+dotnet_diagnostic.CA1806.severity = error

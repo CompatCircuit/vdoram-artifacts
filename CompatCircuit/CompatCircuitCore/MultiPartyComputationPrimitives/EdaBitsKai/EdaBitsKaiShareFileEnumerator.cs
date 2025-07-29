@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 public class EdaBitsKaiShareFileEnumerator : ArithFactoryBinaryDecodableFileEnumerator<EdaBitsKaiShare, Field> {
     public EdaBitsKaiShareFileEnumerator(Stream stream, IArithFactory<Field> factory) : base(stream, factory) { }
 }

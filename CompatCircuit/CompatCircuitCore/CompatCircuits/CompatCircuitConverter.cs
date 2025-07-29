@@ -1,14 +1,14 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.BasicCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.PrecompiledCircuits;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.BasicCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.PrecompiledCircuits;
 using System.Collections.Immutable;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public static class CompatCircuitConverter {
     private static CompatCircuit AddInversionProof(CompatCircuit compatCircuit, out List<int> publicZeroOutputWires) {
         int constantWireCount = compatCircuit.ConstantWireCount;

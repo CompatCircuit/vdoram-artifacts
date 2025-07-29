@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 using System.Diagnostics;
 using System.Numerics;
 
-namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 public class MemoryTraceSortCircuitBoardGenerator : ICircuitBoardGenerator {
     public static IReadOnlyList<string> ColumnNames => MemoryTraceFetchCircuitBoardGenerator.ColumnNames;
     public int TraceCount { get; }

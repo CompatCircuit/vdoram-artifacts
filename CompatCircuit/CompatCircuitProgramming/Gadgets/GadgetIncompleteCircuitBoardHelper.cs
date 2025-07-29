@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 internal static class GadgetIncompleteCircuitBoardHelper {
     internal static void Save(this GadgetInstance gadgetInstance, GadgetIncompleteCircuitBoard board) {
         foreach (Wire wire in gadgetInstance.NewConstantWires) {

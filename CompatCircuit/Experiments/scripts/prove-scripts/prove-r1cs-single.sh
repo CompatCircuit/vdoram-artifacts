@@ -13,6 +13,8 @@ bash generate-local-host-file.sh
         # Extracting the circuit name (removing path and extension)
         circuit_name=$(basename "$file" ".single.r1cs.json")
 
+        echo "${circuit_name}"
+
         stdout_name="${circuit_name}.single.stdout"
         stderr_name="${circuit_name}.single.stderr"
         >"${stderr_name}"

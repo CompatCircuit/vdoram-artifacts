@@ -1,12 +1,12 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 /// <summary>
 /// This executor wrapper does not support R1csCircuitWithValues. It's meant for pure MPC execution.
 /// </summary>

@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public static class CompatCircuitSerializer {
     public static CompatCircuit Deserialize(Stream stream, int bufferSize = -1, bool leaveOpen = false) {
         // Read from a UTF-8 text file

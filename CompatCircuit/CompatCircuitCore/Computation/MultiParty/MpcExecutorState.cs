@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Computation.MultiParty;
+﻿namespace Anonymous.CompatCircuitCore.Computation.MultiParty;
 public enum MpcExecutorState {
     InputRequired,
     Running,

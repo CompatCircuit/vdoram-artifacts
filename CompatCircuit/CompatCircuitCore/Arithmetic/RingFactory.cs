@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.RandomGenerators;
+﻿using Anonymous.CompatCircuitCore.RandomGenerators;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Arithmetic;
+namespace Anonymous.CompatCircuitCore.Arithmetic;
 public record RingFactory : IArithFactory<Ring> {
     public BigInteger RingSize { get; }
 

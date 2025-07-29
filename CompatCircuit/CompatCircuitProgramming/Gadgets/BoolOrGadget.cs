@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class BoolOrGadget : IGadget {
     public List<string> GetInputWireNames() => ["left", "right"];
     public List<string> GetOutputWireNames() => ["output"];

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public class RepeatingEnumerator<T> : IEnumerator<T> {
     private readonly IEnumerator<T> _enumerator;
 

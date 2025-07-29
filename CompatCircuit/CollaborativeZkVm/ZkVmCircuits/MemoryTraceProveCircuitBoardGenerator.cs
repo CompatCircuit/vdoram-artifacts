@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 
-namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 public class MemoryTraceProveCircuitBoardGenerator(int traceCount) : ICircuitBoardGenerator {
     public int TraceCount { get; } = traceCount > 0 ? traceCount : throw new ArgumentOutOfRangeException(nameof(traceCount), "must be a positive integer");
     public static IReadOnlyList<string> ColumnNames => MemoryTraceFetchCircuitBoardGenerator.ColumnNames;

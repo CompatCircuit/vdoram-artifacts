@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.RandomGenerators;
+﻿namespace Anonymous.CompatCircuitCore.RandomGenerators;
 
 /// <summary>
 /// This random generator fills target location with repeated pattern, as if they were random.<br/>

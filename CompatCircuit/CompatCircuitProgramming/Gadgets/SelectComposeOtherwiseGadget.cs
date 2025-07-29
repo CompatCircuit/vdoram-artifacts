@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class SelectComposeOtherwiseGadget(int selectionCount) : IGadget {
     public int SelectionCount { get; } = selectionCount > 0 ? selectionCount : throw new ArgumentOutOfRangeException(nameof(selectionCount), "must be a positive integer");
     public List<string> GetInputWireNames() => [

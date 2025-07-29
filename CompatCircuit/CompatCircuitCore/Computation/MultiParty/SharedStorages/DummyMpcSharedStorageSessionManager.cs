@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 public class DummyMpcSharedStorageSessionManager : IMpcSharedStorageSessionManager {
     public IMpcClient MpcClient { get; }
     public void HandleRawMessage(RawMessage message) { }

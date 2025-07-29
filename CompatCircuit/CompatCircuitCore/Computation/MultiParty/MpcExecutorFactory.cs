@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty;
 public class MpcExecutorFactory : IMpcExecutorFactory {
     private IMpcSharedStorageSessionManager MpcSharedStorageSessionManager { get; }
     private IMpcSharedStorageFactory MpcSharedStorageFactory { get; }

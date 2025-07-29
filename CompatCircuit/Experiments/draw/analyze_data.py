@@ -776,7 +776,7 @@ def get_compute_timecost_from_log_file(file_path: str) -> Dict[str, float]:
 
 def get_zkp_step_timecost_from_stdout_file(filename: str) -> Dict[str, float]:
     sys.stderr.write("get_zkp_step_timecost_from_stdout_file:" + filename + "\n")
-    results = {}
+    results = []
     with open(filename, "r") as file:
         for line in file:
             if line.startswith("End:"):
@@ -790,23 +790,33 @@ def get_zkp_step_timecost_from_stdout_file(filename: str) -> Dict[str, float]:
                     unit = match.group(3)
 
                     # Convert time based on the unit
-                    if unit == "ms":
+                    if unit == "s":
+                        pass
+                    elif unit == "ms":
                         time_value = time_value / 1000
                     elif unit == "µs":
                         time_value = time_value / 1000000
                     elif unit == "ns":
                         time_value = time_value / 1000000000
+                    else:
+                        raise Exception(f"Unknown unit {unit}")
 
                     # Add to results
-                    results[label] = time_value
+                    results.append((label, time_value))
+                else:
+                    print(f"unrecognized line: {line}")
 
-    results_classfied = {
+    del line
+    del time_value
+    del unit
+
+    results_classified = {
         "setup": 0,
         "prove": 0,
         "verify": 0,
     }
     # classify names
-    for label, timecost in results.items():
+    for label, timecost in results:
         if label == "Connecting":
             pass
         elif (
@@ -815,7 +825,7 @@ def get_zkp_step_timecost_from_stdout_file(filename: str) -> Dict[str, float]:
             or label.startswith("Constructing `shifted_powers`")
             or label == "Committing to polynomials"
         ):
-            results_classfied["setup"] += timecost
+            results_classified["setup"] += timecost
         elif label in [
             "commit: p",
             "prove_public",
@@ -823,9 +833,9 @@ def get_zkp_step_timecost_from_stdout_file(filename: str) -> Dict[str, float]:
             "prove_wiring",
             "timed section",
         ]:
-            results_classfied["prove"] += timecost
+            results_classified["prove"] += timecost
         elif label == "Checking evaluations":
-            results_classfied["verify"] += timecost
+            results_classified["verify"] += timecost
         else:
             raise Exception(f"Unrecognized label {label}")
-    return results_classfied
+    return results_classified

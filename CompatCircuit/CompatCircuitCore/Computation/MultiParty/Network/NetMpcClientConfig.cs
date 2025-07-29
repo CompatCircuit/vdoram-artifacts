@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Net;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 public class NetMpcClientConfig {
     public required IReadOnlyList<IPEndPoint> PartyDataEndpoints { get; init; }
     public required IReadOnlyList<IPEndPoint>? PartyAckEndpoints { get; init; }

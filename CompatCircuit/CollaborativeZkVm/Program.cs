@@ -1,24 +1,24 @@
-﻿using SadPencil.CollaborativeZkVm.ZkPrograms;
-using SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
-using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.Computation.SingleParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
-using SadPencil.CompatCircuitCore.SerilogHelpers;
+﻿using Anonymous.CollaborativeZkVm.ZkPrograms;
+using Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
+using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.Computation.SingleParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+using Anonymous.CompatCircuitCore.SerilogHelpers;
 using Serilog;
 using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Diagnostics;
-using Startup = SadPencil.CollaborativeZkVm.Startup;
+using Startup = Anonymous.CollaborativeZkVm.Startup;
 
 // _ = Trace.Listeners.Add(new ConsoleTraceListener(true));
 _ = Trace.Listeners.Add(new SerilogTraceListener.SerilogTraceListener());
@@ -99,13 +99,12 @@ Command RunSingleZkVmCommand() {
             MyID = 0,
             MpcExecutorFactory = mpcExecutorFactory,
             IsSingleParty = true,
-            OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(arg => {
-                (string name, R1csCircuitWithValues r1cs) = arg;
+            OnR1csCircuitWithValuesGeneratedAsync = (string name, R1csCircuitWithValues r1cs) => {
                 using Stream stream = File.Open(Path.Combine(outputFolder.FullName, $"{instanceName}.{name}.single.r1cs.json"), FileMode.Create, FileAccess.Write);
                 JsonSerializerHelper.Serialize(stream, r1cs, JsonConfig.JsonSerializerOptions);
 
                 r1cs.SelfVerify();
-            }),
+            },
         };
 
         try {
@@ -205,11 +204,10 @@ Command RunMpcZkVmCommand() {
             MyID = mpcConfig.MyID,
             MpcExecutorFactory = mpcExecutorFactory,
             IsSingleParty = false,
-            OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(arg => {
-                (string name, R1csCircuitWithValues r1cs) = arg;
+            OnR1csCircuitWithValuesGeneratedAsync = (string name, R1csCircuitWithValues r1cs) => {
                 using Stream stream = File.Open(Path.Combine(outputFolder.FullName, $"{instanceName}.{name}.party{mpcConfig.MyID}.r1cs.json"), FileMode.Create, FileAccess.Write);
                 JsonSerializerHelper.Serialize(stream, r1cs, JsonConfig.JsonSerializerOptions);
-            }),
+            },
         };
 
         try {

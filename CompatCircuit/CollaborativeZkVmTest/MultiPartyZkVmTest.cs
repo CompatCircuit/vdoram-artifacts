@@ -1,16 +1,15 @@
-﻿using SadPencil.CollaborativeZkVm.ZkPrograms;
-using SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+﻿using Anonymous.CollaborativeZkVm.ZkPrograms;
+using Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 
-namespace SadPencil.CollaborativeZkVmTest;
+namespace Anonymous.CollaborativeZkVmTest;
 [TestClass]
 public class MultiPartyZkVmTest {
     [TestMethod]
@@ -68,7 +67,7 @@ public class MultiPartyZkVmTest {
                 MyID = myID,
                 MpcExecutorFactory = mpcExecutorFactory,
                 IsSingleParty = false,
-                OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(),
+                OnR1csCircuitWithValuesGeneratedAsync = (_, _) => { },
             };
             zkProgramExecutors.Add(zkProgramExecutor);
         }

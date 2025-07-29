@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+﻿namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 public enum ZkVmOpType : byte {
     /// <summary>
     /// Stop the program
@@ -94,4 +94,8 @@ public enum ZkVmOpType : byte {
     /// Set Reg{arg0} = 1 if Reg{arg1} is less than Reg{arg2}, otherwise 0
     /// </summary>
     LessThan,
+    /// <summary>
+    /// Set Reg{arg0} = Reg{arg1} >> 1
+    /// </summary>
+    RightShift,
 }

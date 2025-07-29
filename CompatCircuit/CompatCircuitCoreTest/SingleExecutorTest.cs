@@ -1,15 +1,15 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.SingleParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.SingleParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 using System.Text;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 
 [TestClass]
 public class SingleExecutorTest {

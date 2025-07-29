@@ -3,7 +3,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public static class BigIntegerHelper {
     public static void EncodeBytes(this BigInteger value, Span<byte> destination, out int bytesWritten, bool isUnsigned = true, bool isBigEndian = false) {
         int bigIntByteCount = value.GetByteCount(isUnsigned);

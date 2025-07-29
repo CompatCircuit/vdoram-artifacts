@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
 public class ExperimentRandomPublicInputFileEnumerator : ArithFactoryBinaryDecodableFileEnumerator<Field, Field> {
     public ExperimentRandomPublicInputFileEnumerator(Stream stream, IArithFactory<Field> factory) : base(stream, factory) { }
 }

@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class BitsLessThanGadget(int bitCount) : IGadget {
     public int BitCount { get; } = bitCount >= 2 ? bitCount : throw new ArgumentOutOfRangeException(nameof(bitCount), "must be a positive integer and no less than 2");
     public List<string> GetInputWireNames() => Enumerable.Range(0, this.BitCount).Select(i => $"left_bit_{i}").Concat(Enumerable.Range(0, this.BitCount).Select(i => $"right_bit_{i}")).ToList();

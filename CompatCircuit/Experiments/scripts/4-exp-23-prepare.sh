@@ -15,12 +15,13 @@ rm -r -- "$run_dir/exp2files/" || true
     cd -- "$run_dir/bin/"
 
     if [ ! -f ExpConfig.json ]; then
-        echo Please run 'bash 1-exp-1prepare.sh' first.
+        echo Please run 'bash 1-exp-1-prepare.sh' first.
         exit 1
     fi
 
-    ./SadPencil.CollaborativeZkVmExperiment exp-2-gen-zk-program-instance
-    ./SadPencil.CollaborativeZkVmExperiment exp-3-gen-zk-program-instance
+    ./Anonymous.CollaborativeZkVmExperiment exp-2-gen-zk-program-instance
+    ./Anonymous.CollaborativeZkVmExperiment exp-3-gen-zk-program-instance
+    ./Anonymous.CollaborativeZkVmExperiment exp-4-gen-zk-program-instance
 )
 
 mkdir -p -- "$run_dir/exp23files/"

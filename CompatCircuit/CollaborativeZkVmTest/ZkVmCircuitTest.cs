@@ -1,7 +1,7 @@
-﻿using SadPencil.CollaborativeZkVm.ZkVmCircuits;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CollaborativeZkVm.ZkVmCircuits;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CollaborativeZkVmTest;
+namespace Anonymous.CollaborativeZkVmTest;
 [TestClass]
 public class ZkVmCircuitTest {
     [TestMethod]

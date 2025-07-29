@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.CompatCircuits;
+﻿using Anonymous.CompatCircuitCore.CompatCircuits;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 
 [TestClass]
 public class CompatCircuitSerializationTest {

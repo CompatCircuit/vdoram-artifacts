@@ -1,9 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 using System.Diagnostics;
+using System.Numerics;
 
-namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 
 public class ZkVmExecutorCircuitBoardGenerator : ICircuitBoardGenerator {
     public int HotRegCount { get; }
@@ -21,30 +22,55 @@ public class ZkVmExecutorCircuitBoardGenerator : ICircuitBoardGenerator {
         IReadOnlyList<ZkVmOpType> AllZkVmOpTypes = Enum.GetValues<ZkVmOpType>();
 
         #region const sequential numbers
-        // Prepare constant number i
+        // Prepare constant number i and power of twos
         IReadOnlyDictionary<int, Wire> constNumberWires;
+        IReadOnlyList<Wire> twoPowWires;
         {
             Dictionary<int, Wire> constNumberWireDict = [];
-            void AddConstNumberWire(int val) {
+            Wire AddConstNumberWire(int val) {
                 if (!constNumberWireDict.ContainsKey(val)) {
                     Wire wire = Wire.NewConstantWire(ArithConfig.FieldFactory.New(val), $"const_number_{val}");
                     circuitBoard.AddWire(wire);
                     constNumberWireDict.Add(val, wire);
+                    return wire;
                 }
+                return constNumberWireDict[val];
             }
 
-            AddConstNumberWire(0);
-            AddConstNumberWire(1);
+            _ = AddConstNumberWire(0);
+            _ = AddConstNumberWire(1);
+            _ = AddConstNumberWire(2);
 
             for (int i = 0; i < this.RegCount; i++) {
-                AddConstNumberWire(i);
+                _ = AddConstNumberWire(i);
             }
 
             foreach (ZkVmOpType opType in AllZkVmOpTypes) {
-                AddConstNumberWire((int)opType);
+                _ = AddConstNumberWire((int)opType);
             }
 
             constNumberWires = constNumberWireDict;
+
+            // prepare power of two wires
+            List<Wire> twoPowWiresList = [];
+            twoPowWiresList.Add(constNumberWires[1]); // 2^0 = 1
+            twoPowWiresList.Add(constNumberWires[2]); // 2^1 = 2
+
+            BigInteger twoPowValue = 2;
+            for (int i = 2; i < ArithConfig.BitSize; i++) {
+                twoPowValue *= 2;
+                Wire twoPowWire;
+                if (twoPowValue < int.MaxValue) {
+                    twoPowWire = AddConstNumberWire((int)twoPowValue);
+                }
+                else {
+                    twoPowWire = Wire.NewConstantWire(ArithConfig.FieldFactory.New(twoPowValue), $"const_number_{twoPowValue}");
+                    circuitBoard.AddWire(twoPowWire);
+                }
+                twoPowWiresList.Add(twoPowWire);
+            }
+
+            twoPowWires = twoPowWiresList;
         }
 
         Wire constNumberNegOneWire = Wire.NewConstantWire(ArithConfig.FieldFactory.NegOne, "const_number_neg_one");
@@ -632,17 +658,74 @@ public class ZkVmExecutorCircuitBoardGenerator : ICircuitBoardGenerator {
         }
 
         // ZkVmOpType.LessThan
+        IReadOnlyList<Wire> inRegAtArg1Bits;
+        {
+            GadgetInstance ins = new BitDecompositionGadget().ApplyGadget([inRegAtArg1], "in_reg_at_arg_1_bits()");
+            ins.Save(circuitBoard);
+            inRegAtArg1Bits = ins.OutputWires;
+            for (int i = 0; i < inRegAtArg1Bits.Count; i++) {
+                inRegAtArg1Bits[i].Name = $"in_reg_at_arg_1_bits_{i}";
+            }
+        }
+
+        IReadOnlyList<Wire> inRegAtArg2Bits;
+        {
+            GadgetInstance ins = new BitDecompositionGadget().ApplyGadget([inRegAtArg2], "in_reg_at_arg_2_bits()");
+            ins.Save(circuitBoard);
+            inRegAtArg2Bits = ins.OutputWires;
+            for (int i = 0; i < inRegAtArg2Bits.Count; i++) {
+                inRegAtArg2Bits[i].Name = $"in_reg_at_arg_2_bits_{i}";
+            }
+        }
+
+        Trace.Assert(ArithConfig.BitSize == inRegAtArg1Bits.Count);
+        Trace.Assert(ArithConfig.BitSize == inRegAtArg2Bits.Count);
+
         {
             ZkVmOpType opType = ZkVmOpType.LessThan;
             _ = virtualOutProgramCounterByDefaultPossibilities.Add(opType);
             Wire lessThanResultWire;
             {
-                GadgetInstance ins = new FieldLessThanGadget().ApplyGadget([inRegAtArg1, inRegAtArg2], "less_than_result()");
+                GadgetInstance ins = new BitsLessThanGadget(ArithConfig.BitSize).ApplyGadget([.. inRegAtArg1Bits, .. inRegAtArg2Bits], "less_than_result()");
                 ins.Save(circuitBoard);
                 lessThanResultWire = ins.OutputWires[0];
                 lessThanResultWire.Name = "less_than_result";
             }
             virtualOutHotRegAtArg0Possibilities.Add(opType, lessThanResultWire);
+        }
+
+        // ZkVmOpType.RightShift
+        {
+            ZkVmOpType opType = ZkVmOpType.RightShift;
+            _ = virtualOutProgramCounterByDefaultPossibilities.Add(opType);
+            Wire rightShiftResultWire;
+            {
+                List<Wire> itemWires = [];
+
+                for (int i = 0; i < ArithConfig.BitSize - 1; i++) { // -1: Since we right shift by 1
+                    Wire leftBit = inRegAtArg1Bits[i + 1]; // +1: Since we right shift by 1
+                    Wire twoPowWire = twoPowWires[i]; // 2^i
+
+                    Wire itemWire;
+                    {
+                        GadgetInstance ins = new FieldMulGadget().ApplyGadget([leftBit, twoPowWire], $"in_reg_at_arg_2_bits_{i + 1}_2^{i}()"); // +1: Since we right shift by 1
+                        ins.Save(circuitBoard);
+                        itemWire = ins.OutputWires[0];
+                        itemWire.Name = $"in_reg_at_arg_2_bits_{i + 1}_2^{i}";
+                    }
+
+                    itemWires.Add(itemWire);
+                }
+
+                {
+                    GadgetInstance ins = new FieldAddGadget(itemWires.Count).ApplyGadget(itemWires, "right_shift_one_result()");
+                    ins.Save(circuitBoard);
+                    rightShiftResultWire = ins.OutputWires[0];
+                    rightShiftResultWire.Name = "right_shift_one_result";
+                }
+            }
+
+            virtualOutHotRegAtArg0Possibilities.Add(opType, rightShiftResultWire);
         }
 
         // Check program counter possibilities

@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.BinarySerialization;
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 public class EdaBitsKaiShareList : List<EdaBitsKaiShare>, IBinaryEncodable, IArithFactoryBinaryDecodable<EdaBitsKaiShareList, Field> {
     public void EncodeBytes(Span<byte> destination, out int bytesWritten) {
         BinaryPrimitives.WriteInt32LittleEndian(destination, this.Count);

@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 
 [TestClass]
 public class IsIncreasingByOneTest {

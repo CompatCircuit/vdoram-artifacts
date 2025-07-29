@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public static class CompatCircuitOperationTypeHelper {
     public static string OperationTypeToString(CompatCircuitOperationType operationType) => operationType switch {
         CompatCircuitOperationType.Addition => "ADD",

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits.BasicCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits.BasicCircuits;
 public class BasicCircuit : CompatCircuit {
     private readonly ImmutableSortedSet<CompatCircuitOperationType> _allowedOperationTypes = [CompatCircuitOperationType.Addition, CompatCircuitOperationType.Multiplication];
     protected override ImmutableSortedSet<CompatCircuitOperationType> AllowedOperationTypes => this._allowedOperationTypes;

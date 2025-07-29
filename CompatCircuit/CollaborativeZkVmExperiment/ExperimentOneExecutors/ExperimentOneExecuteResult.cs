@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
+﻿using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentOneExecutors;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentOneExecutors;
 public class ExperimentOneExecuteResult {
     public required IReadOnlyDictionary<string, R1csCircuitWithValues> R1csCircuitsWithValues { get; init; }
     public required TimeSpan TotalTime { get; init; }

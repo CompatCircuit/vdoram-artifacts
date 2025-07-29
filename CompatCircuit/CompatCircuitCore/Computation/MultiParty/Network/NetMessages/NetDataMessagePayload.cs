@@ -1,7 +1,7 @@
 ﻿using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
 public class NetDataMessagePayload(byte[] data) : INetMessagePayload<NetDataMessagePayload> {
     public static byte MessagePayloadTypeID => (byte)NetMessagePayloadType.Data;
     public byte[] Data { get; } = data;

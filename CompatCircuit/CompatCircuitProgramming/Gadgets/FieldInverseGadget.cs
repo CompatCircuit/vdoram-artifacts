@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class FieldInverseGadget : IGadget {
     public List<string> GetInputWireNames() => ["input"];
     public List<string> GetOutputWireNames() => ["inverse"];

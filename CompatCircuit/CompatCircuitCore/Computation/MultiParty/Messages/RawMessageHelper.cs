@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+﻿namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public static class RawMessageHelper {
     public static RawMessage ComposeRawMessage<T>(int sessionID, T messagePayload) where T : IMessagePayload<T> {
         byte[] payloadBytes = new byte[messagePayload.GetEncodedByteCount()];

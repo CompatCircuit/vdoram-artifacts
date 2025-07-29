@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Extensions;
+﻿namespace Anonymous.CompatCircuitCore.Extensions;
 public static class ListHelper {
     public static void RemoveBySwap<T>(this List<T> list, int index) {
         // https://stackoverflow.com/a/30579982

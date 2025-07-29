@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class BigIntegerInputShareMessagePayload(string exposureKey, int shareOwnerID, IEnumerable<BigInteger> values) : BigIntegerExposureMessagePayload(exposureKey, shareOwnerID, values), IMessagePayload<BigIntegerInputShareMessagePayload> {
     public static new byte MessagePayloadTypeID => (byte)MessagePayloadType.BigIntegerInputShare;
 

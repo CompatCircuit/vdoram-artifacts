@@ -1,7 +1,7 @@
-﻿using SadPencil.CollaborativeZkVm.ZkPrograms;
-using SadPencil.CollaborativeZkVm.ZkVmCircuits;
+﻿using Anonymous.CollaborativeZkVm.ZkPrograms;
+using Anonymous.CollaborativeZkVm.ZkVmCircuits;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentTwoThreeZkPrograms;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentTwoThreeZkPrograms;
 public class ExperimentThreeZkProgramGenerator : ExperimentTwoThreeZkProgramGeneratorBase {
     protected override string CodeName { get; }
 

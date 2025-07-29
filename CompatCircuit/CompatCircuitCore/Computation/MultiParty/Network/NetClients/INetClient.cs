@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
 public interface INetClient {
     public void Start(IPEndPoint endpoint);
     public void Stop();

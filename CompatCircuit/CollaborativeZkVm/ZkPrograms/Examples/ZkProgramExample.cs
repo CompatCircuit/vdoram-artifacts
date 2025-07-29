@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 
-namespace SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
+namespace Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
 public class ZkProgramExample : ZkProgram {
     public required string CodeName { get; init; }
     public required string Name { get; init; }

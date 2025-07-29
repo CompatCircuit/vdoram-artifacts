@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.BinarySerialization;
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 /// <summary>
 /// A list containing shares of beaver triples of a single MPC party.
 /// </summary>

@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public interface ICircuitBoardMpcExecutorWrapper {
     public void AddPublic(string wireName, Field value);
     public void AddPrivate(string wireName, MpcValue value);

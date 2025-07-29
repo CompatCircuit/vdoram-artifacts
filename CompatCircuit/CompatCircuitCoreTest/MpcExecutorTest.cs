@@ -1,21 +1,21 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.Computation.SingleParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.Computation.SingleParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 using System.Text;
 
-namespace SadPencil.CompatCircuitCoreTest;
+namespace Anonymous.CompatCircuitCoreTest;
 [TestClass]
 public class MpcExecutorTest {
     public static CompatCircuit GetTestCircuit() {

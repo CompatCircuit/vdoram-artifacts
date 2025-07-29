@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 public record MpcValue {
     public required Field Value { get; init; }
     public required bool IsSecretShare { get; init; }

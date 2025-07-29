@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public class CompatCircuitOperation : IEquatable<CompatCircuitOperation>, IGeneralBinaryDecodable<CompatCircuitOperation>, IBinaryEncodable {
     public CompatCircuitOperationType OperationType { get; }
     public IReadOnlyList<int> InputWires { get; }

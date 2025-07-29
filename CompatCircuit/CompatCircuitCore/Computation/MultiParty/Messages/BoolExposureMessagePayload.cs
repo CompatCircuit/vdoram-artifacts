@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers.Binary;
 using System.Collections;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class BoolExposureMessagePayload(string exposureKey, int shareOwnerID, BitArray bits) : IMessagePayload<BoolExposureMessagePayload> {
     public static byte MessagePayloadTypeID => (byte)MessagePayloadType.BoolExposure;
 

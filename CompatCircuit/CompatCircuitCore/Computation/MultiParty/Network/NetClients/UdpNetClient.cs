@@ -1,11 +1,11 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
 public class UdpNetClient : INetClient {
     private UdpClient? UdpClient { get; set; } = null;
 

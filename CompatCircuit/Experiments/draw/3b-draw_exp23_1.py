@@ -133,7 +133,7 @@ if __name__ == "__main__":
                     else:
                         assert False
 
-    xlabels = ["Instruction type", "Instruction count"]
+    xlabels = ["Instruction type", "Instruction cycles"]
 
     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(7, 4))
 

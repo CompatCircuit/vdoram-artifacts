@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.BinarySerialization;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
 public class DaBitPrioPlusShare : IBinaryEncodable, IArithFactoryBinaryDecodable<DaBitPrioPlusShare, Field>, IEquatable<DaBitPrioPlusShare> {
     public required Field ArithShare { get; init; }
     public required bool BoolShare { get; init; }

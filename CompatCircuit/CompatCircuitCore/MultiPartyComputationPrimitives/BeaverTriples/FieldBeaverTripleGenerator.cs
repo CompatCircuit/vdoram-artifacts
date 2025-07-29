@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 public class FieldBeaverTripleGenerator {
     public required FieldFactory FieldFactory { get; init; }
     public required FieldSecretSharing FieldSecretSharing { get; init; }

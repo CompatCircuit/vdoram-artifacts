@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentOneCircuits;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentOneCircuits;
 public class AdditionCircuitBoardGenerator : ICircuitBoardGenerator {
     public static int RepeatCount { get; } = 100000;
     public CircuitBoard GetCircuitBoard() {

@@ -1,5 +1,5 @@
-SadPencil.CompatCircuitCore gen-preshared --directory . --parties 2 --field-beaver-triples 1000 --bool-beaver-triples 100000 --edaBits-pair 100 --daBitPrioPlus-pair 1000
+Anonymous.CompatCircuitCore gen-preshared --directory . --parties 2 --field-beaver-triples 1000 --bool-beaver-triples 100000 --edaBits-pair 100 --daBitPrioPlus-pair 1000
 
-SadPencil.CompatCircuitCore run-mpc --config MpcConfig.0.json --circuit ExampleCircuit.circuit --public-input ExamplePublicInput.json --private-input ExamplePrivateInput.0.json --field-beaver FieldBeaver.0.bin --bool-beaver BoolBeaver.0.bin --edaBits edaBits.0.bin --daBitPrioPlus daBitPrioPlus.0.bin --public-output ExamplePublicOutput.0.json
+Anonymous.CompatCircuitCore run-mpc --config MpcConfig.0.json --circuit ExampleCircuit.circuit --public-input ExamplePublicInput.json --private-input ExamplePrivateInput.0.json --field-beaver FieldBeaver.0.bin --bool-beaver BoolBeaver.0.bin --edaBits edaBits.0.bin --daBitPrioPlus daBitPrioPlus.0.bin --public-output ExamplePublicOutput.0.json
 
-SadPencil.CompatCircuitCore run-mpc --config MpcConfig.1.json --circuit ExampleCircuit.circuit --public-input ExamplePublicInput.json --private-input ExamplePrivateInput.1.json --field-beaver FieldBeaver.1.bin --bool-beaver BoolBeaver.1.bin --edaBits edaBits.1.bin --daBitPrioPlus daBitPrioPlus.1.bin --public-output ExamplePublicOutput.1.json
+Anonymous.CompatCircuitCore run-mpc --config MpcConfig.1.json --circuit ExampleCircuit.circuit --public-input ExamplePublicInput.json --private-input ExamplePrivateInput.1.json --field-beaver FieldBeaver.1.bin --bool-beaver BoolBeaver.1.bin --edaBits edaBits.1.bin --daBitPrioPlus daBitPrioPlus.1.bin --public-output ExamplePublicOutput.1.json

@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
 using System.Collections.Concurrent;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 public class MpcSharedStorageSessionManager : IDisposable, IMpcSharedStorageSessionManager {
 
     private class SessionState {

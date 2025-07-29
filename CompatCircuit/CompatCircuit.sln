@@ -8,19 +8,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CollaborativeZkVm", "CollaborativeZkVm\SadPencil.CollaborativeZkVm.csproj", "{55C25440-3AE5-4469-8834-46A1D97E1354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CollaborativeZkVm", "CollaborativeZkVm\Anonymous.CollaborativeZkVm.csproj", "{55C25440-3AE5-4469-8834-46A1D97E1354}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CollaborativeZkVmTest", "CollaborativeZkVmTest\SadPencil.CollaborativeZkVmTest.csproj", "{7D149C09-C68F-42FB-8482-CA79A9527B90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CollaborativeZkVmTest", "CollaborativeZkVmTest\Anonymous.CollaborativeZkVmTest.csproj", "{7D149C09-C68F-42FB-8482-CA79A9527B90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CompatCircuitProgramming", "CompatCircuitProgramming\SadPencil.CompatCircuitProgramming.csproj", "{C3BDEE83-371E-462E-9FC8-E3826501CE8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CompatCircuitProgramming", "CompatCircuitProgramming\Anonymous.CompatCircuitProgramming.csproj", "{C3BDEE83-371E-462E-9FC8-E3826501CE8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CompatCircuitProgrammingTest", "CompatCircuitProgrammingTest\SadPencil.CompatCircuitProgrammingTest.csproj", "{057210C1-BEF6-4E2E-BC9F-E1EF0C1307CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CompatCircuitProgrammingTest", "CompatCircuitProgrammingTest\Anonymous.CompatCircuitProgrammingTest.csproj", "{057210C1-BEF6-4E2E-BC9F-E1EF0C1307CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CompatCircuitCore", "CompatCircuitCore\SadPencil.CompatCircuitCore.csproj", "{3348596F-7A6E-4995-B369-F446F55EC376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CompatCircuitCore", "CompatCircuitCore\Anonymous.CompatCircuitCore.csproj", "{3348596F-7A6E-4995-B369-F446F55EC376}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SadPencil.CompatCircuitCoreTest", "CompatCircuitCoreTest\SadPencil.CompatCircuitCoreTest.csproj", "{3CC3F3A5-AD23-4031-867E-02BB25EB1774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymous.CompatCircuitCoreTest", "CompatCircuitCoreTest\Anonymous.CompatCircuitCoreTest.csproj", "{3CC3F3A5-AD23-4031-867E-02BB25EB1774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SadPencil.CollaborativeZkVmExperiment", "CollaborativeZkVmExperiment\SadPencil.CollaborativeZkVmExperiment.csproj", "{779F70DF-2D73-4B9A-AA71-03F0FF962AD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymous.CollaborativeZkVmExperiment", "CollaborativeZkVmExperiment\Anonymous.CollaborativeZkVmExperiment.csproj", "{779F70DF-2D73-4B9A-AA71-03F0FF962AD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

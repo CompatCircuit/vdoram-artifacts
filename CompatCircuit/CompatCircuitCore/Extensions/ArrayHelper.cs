@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Extensions;
+﻿namespace Anonymous.CompatCircuitCore.Extensions;
 public static class ArrayHelper {
     public static int FindPattern<T>(T[] haystack, T[] needle) where T : IEquatable<T> {
         ArgumentNullException.ThrowIfNull(haystack);

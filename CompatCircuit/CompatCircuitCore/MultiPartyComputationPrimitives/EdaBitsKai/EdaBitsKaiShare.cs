@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Collections;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 public class EdaBitsKaiShare : IBinaryEncodable, IArithFactoryBinaryDecodable<EdaBitsKaiShare, Field>, IEquatable<EdaBitsKaiShare> {
     public required Field ArithShare { get; init; }
     public required IReadOnlyList<bool> BoolShares { get; init; }

@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
 public class R1csCircuit {
     public required int WireCount { get; init; }
     public required int PublicWireCount { get; init; }

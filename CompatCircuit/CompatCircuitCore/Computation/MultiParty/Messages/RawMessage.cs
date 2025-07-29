@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class RawMessage : IBinaryEncodable, IGeneralBinaryDecodable<RawMessage> {
     public required int SessionID { get; init; }
     public required byte MessagePayloadType { get; init; }

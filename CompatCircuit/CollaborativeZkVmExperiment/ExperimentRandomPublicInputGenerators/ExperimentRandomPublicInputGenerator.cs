@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentRandomPublicInputGenerators;
 public class ExperimentRandomPublicInputGenerator {
     public required FieldFactory FieldFactory { get; init; }
     public void GenerateExperimentRandomPublicInputFile(Stream stream, int inputCount, bool leaveOpen = false) {

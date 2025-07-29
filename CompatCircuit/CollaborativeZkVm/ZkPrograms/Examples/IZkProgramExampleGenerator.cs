@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
+﻿namespace Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
 public interface IZkProgramExampleGenerator {
     public ZkProgramExample GetZkProgram();
 }

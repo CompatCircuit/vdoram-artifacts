@@ -3,7 +3,7 @@ name = "draw"
 version = "0.1.0"
 description = "Draw figures for CompatCircuit and zkVM experiments"
 authors = [
-    {name = "SadPencil", email = "sadpencil@outlook.com"},
+    {name = "Huayi Qi", email = "qi@huayi.email"},
 ]
 dependencies = [
     "matplotlib>=3.9.2",

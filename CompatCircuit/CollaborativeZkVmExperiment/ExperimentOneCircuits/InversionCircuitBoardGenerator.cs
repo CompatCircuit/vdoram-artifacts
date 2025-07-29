@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 
-namespace SadPencil.CollaborativeZkVmExperiment.ExperimentOneCircuits;
+namespace Anonymous.CollaborativeZkVmExperiment.ExperimentOneCircuits;
 public class InversionCircuitBoardGenerator {
     public static int RepeatCount { get; } = 1000;
     public CircuitBoard GetCircuitBoard() {

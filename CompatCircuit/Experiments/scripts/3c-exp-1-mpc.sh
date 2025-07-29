@@ -21,7 +21,7 @@ errors=0 # Error counter
 for ((i = 0; i < $CONTROL_NODE_NUM; i++)); do
     (
         ssh_user_host="${NODE_SSH_USERNAME}@${NODE_IPS[$i]}"
-        ssh "$ssh_user_host" -- "cd ~/$PROJECT_REMOTE_DIR_NAME/$MPC_NODE_NUM/bin/ && tmux new-session -d 'tmux setw remain-on-exit on; for repeat_index in "'$(seq 1 '"$EXP_REPEAT_COUNT"'); do INSTANCE_NAME=exp1_mpc.repeat$repeat_index ./SadPencil.CollaborativeZkVmExperiment exp-1-run-mpc --unsafe-repeat-preshared --party '"$i; sleep 10; done; echo ==== All done ===='"
+        ssh "$ssh_user_host" -- "cd ~/$PROJECT_REMOTE_DIR_NAME/$MPC_NODE_NUM/bin/ && tmux new-session -d 'tmux setw remain-on-exit on; for repeat_index in "'$(seq 1 '"$EXP_REPEAT_COUNT"'); do INSTANCE_NAME=exp1_mpc.repeat$repeat_index ./Anonymous.CollaborativeZkVmExperiment exp-1-run-mpc --unsafe-repeat-preshared --party '"$i; sleep 10; done; echo ==== All done ===='"
     ) &
 
     pid=$!       # Get the process ID of the background job

@@ -1,4 +1,4 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.IO.Pipelines;
 using System.Net;
 using System.Net.Sockets;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetClients;
 public class TcpNetClient : INetClient {
     private Dictionary<EndPoint, Socket> ClientSockets { get; set; } = [];
 

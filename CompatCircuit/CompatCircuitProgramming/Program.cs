@@ -1,14 +1,14 @@
-﻿using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.BasicCircuits;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.SerilogHelpers;
-using SadPencil.CompatCircuitProgramming.BitDecompositionProofCircuit;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.BasicCircuits;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.SerilogHelpers;
+using Anonymous.CompatCircuitProgramming.BitDecompositionProofCircuit;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 using Serilog;
 using System.CommandLine;
 using System.Diagnostics;
-using Startup = SadPencil.CompatCircuitCore.Startup;
+using Startup = Anonymous.CompatCircuitCore.Startup;
 
 // _ = Trace.Listeners.Add(new ConsoleTraceListener(true));
 _ = Trace.Listeners.Add(new SerilogTraceListener.SerilogTraceListener());

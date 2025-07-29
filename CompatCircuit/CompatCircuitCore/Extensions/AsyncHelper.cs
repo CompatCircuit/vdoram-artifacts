@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public static class AsyncHelper {
     /// <summary>
     /// This method is primarily used for debugging async methods, where unhandled exceptions are ignored.

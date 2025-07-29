@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class FieldMulGadget(int factorCount = 2) : IGadget {
     public int FactorCount { get; } = factorCount >= 2 ? factorCount : throw new ArgumentOutOfRangeException(nameof(factorCount), "must be a positive integer and no less than 2");
     public List<string> GetInputWireNames() => Enumerable.Range(0, this.FactorCount).Select(i => $"factor_{i}").ToList();

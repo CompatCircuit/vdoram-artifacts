@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
 public class DaBitPrioPlusShareFileEnumerator : ArithFactoryBinaryDecodableFileEnumerator<DaBitPrioPlusShare, Field> {
     public DaBitPrioPlusShareFileEnumerator(Stream stream, IArithFactory<Field> factory) : base(stream, factory) { }
 }

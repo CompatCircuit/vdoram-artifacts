@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public abstract class CircuitBoardExecutorWrapperBase<TPrivateInputValue> {
     protected CompatCircuit CompatCircuit { get; }
     protected CompatCircuitSymbols CompatCircuitSymbols { get; }

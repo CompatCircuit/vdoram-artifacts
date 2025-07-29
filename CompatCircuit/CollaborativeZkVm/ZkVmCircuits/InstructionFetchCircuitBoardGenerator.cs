@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
-using SadPencil.CompatCircuitProgramming.Gadgets;
+﻿using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
+using Anonymous.CompatCircuitProgramming.Gadgets;
 
-namespace SadPencil.CollaborativeZkVm.ZkVmCircuits;
+namespace Anonymous.CollaborativeZkVm.ZkVmCircuits;
 public class InstructionFetchCircuitBoardGenerator(int opcodeTableLength) : ICircuitBoardGenerator {
     public int OpcodeTableLength = opcodeTableLength > 0 ? opcodeTableLength : throw new ArgumentOutOfRangeException(nameof(opcodeTableLength), "must be a positive integer");
 

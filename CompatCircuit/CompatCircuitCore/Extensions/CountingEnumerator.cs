@@ -1,4 +1,4 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 
 public class CountingEnumerator<T> : ICountingEnumerator<T> {
     private readonly IEnumerator<T> _innerEnumerator;

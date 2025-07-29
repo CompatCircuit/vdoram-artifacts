@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CollaborativeZkVm.ZkPrograms;
+namespace Anonymous.CollaborativeZkVm.ZkPrograms;
 public class ZkProgramExecuteResult {
     public required IReadOnlyList<Field> PublicOutputs { get; init; }
     public required int GlobalStepCounter { get; init; }

@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class BoolNotGadget(int bitCount = 1) : IGadget {
     public int BitCount { get; } = bitCount > 0 ? bitCount : throw new ArgumentOutOfRangeException(nameof(bitCount), "must be a positive integer");
     public List<string> GetInputWireNames() => Enumerable.Range(0, this.BitCount).Select(i => $"input_{i}").ToList();

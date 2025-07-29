@@ -29,7 +29,7 @@ rm -r -- "$run_dir/exp1files/" || true
     cd -- "$run_dir/bin/"
     rm -- *.bin MpcConfig.*.json ExpConfig.json || true
     cp -- ../ExpConfig.json .
-    ./SadPencil.CollaborativeZkVmExperiment exp-1-prepare-files --unsafe-repeat-preshared
+    ./Anonymous.CollaborativeZkVmExperiment exp-1-prepare-files --unsafe-repeat-preshared
     mkdir -p -- "$run_dir/exp1files/"
     cp -- *.bin MpcConfig.*.json ExpConfig.json "$run_dir/exp1files/"
 )

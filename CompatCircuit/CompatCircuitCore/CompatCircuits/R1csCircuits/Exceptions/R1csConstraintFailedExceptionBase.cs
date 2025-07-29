@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits.Exceptions;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits.Exceptions;
 public abstract class R1csConstraintFailedExceptionBase : Exception {
     public int LeftWire { get; }
     public int RightWire { get; }

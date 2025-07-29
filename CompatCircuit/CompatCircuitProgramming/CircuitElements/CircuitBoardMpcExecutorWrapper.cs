@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public class CircuitBoardMpcExecutorWrapper : CircuitBoardExecutorWrapperBase<MpcValue>, ICircuitBoardMpcExecutorWrapper {
     protected IMpcExecutor CircuitExecutor { get; }
 

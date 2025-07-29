@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+﻿namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class PartyCompletedMessagePayload(int partyID) : PartyOnlineMessagePayload(partyID), IMessagePayload<PartyCompletedMessagePayload> {
     public static new byte MessagePayloadTypeID => (byte)MessagePayloadType.PartyCompleted;
     public static new PartyCompletedMessagePayload FromEncodedBytes(ReadOnlySpan<byte> buffer, out int bytesRead) {

@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
 using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public static class JsonSerializerHelper {
     private static readonly List<JsonConverter> _jsonConverters = [new IPEndpointJsonConverter(), new IPAddressJsonConverter()];
     public static IReadOnlyList<JsonConverter> JsonConverters { get; } = _jsonConverters;

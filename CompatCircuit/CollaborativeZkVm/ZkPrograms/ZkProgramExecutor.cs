@@ -1,20 +1,22 @@
-﻿using SadPencil.CollaborativeZkVm.ZkVmCircuits;
-using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CollaborativeZkVm.ZkVmCircuits;
+using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 using System.Diagnostics;
 using System.Numerics;
 
-namespace SadPencil.CollaborativeZkVm.ZkPrograms;
+namespace Anonymous.CollaborativeZkVm.ZkPrograms;
 public class ZkProgramExecutor {
     // TODO: extract ZkProgramExecutor as well as ExperimentExecutor as an interface
 
-    public required IProgress<(string, R1csCircuitWithValues)> OnR1csCircuitWithValuesGenerated;
+    // Note: previously `IProgress` was used. However, it represents a fire-and-forget usage which leads the program terminates itself before all files are saved on disk.
+    // Therefore, `async Task` is preferred now so ZkProgramExecutor can wait for all time-consuming stuffs.
+    public required Action<string, R1csCircuitWithValues> OnR1csCircuitWithValuesGeneratedAsync;
 
     public required ZkProgramInstance ZkProgramInstance { get; init; }
 
@@ -34,6 +36,13 @@ public class ZkProgramExecutor {
         this.IsSingleParty ? new(value, isSecretShare: false) : new(this.MyID == 0 ? value : ArithConfig.FieldFactory.Zero, isSecretShare: true);
 
     public async Task<ZkProgramExecuteResult> Execute() => await AsyncHelper.TerminateOnException(async () => {
+        // Saving all R1csCircuitWithValuesGenerated Tasks, allowing to wait for them after execution.
+        List<Task> onR1csCircuitWithValuesGeneratedTasks = [];
+        void RaiseR1csCircuitWithValuesGenerated(string filename, R1csCircuitWithValues r1CsCircuitWithValues) {
+            Task task = Task.Run(() => this.OnR1csCircuitWithValuesGeneratedAsync(filename, r1CsCircuitWithValues));
+            onR1csCircuitWithValuesGeneratedTasks.Add(task);
+        }
+
         DateTimeOffset totalStartTime = DateTimeOffset.Now;
         Dictionary<string, DateTimeOffset> stepStartTimes = [];
         Dictionary<string, DateTimeOffset> stepEndTimes = [];
@@ -175,7 +184,7 @@ public class ZkProgramExecutor {
                 pubOutOpIfRevealed = GetOutput("out_op_if_revealed").AssumeNonShare();
 
                 // save r1cs circuit with value shares for verification
-                this.OnR1csCircuitWithValuesGenerated.Report(($"InstructionFetcherCircuit-Step-{globalStepCounter}", executorWrapper.GetR1csCircuitWithValues()));
+                RaiseR1csCircuitWithValuesGenerated($"InstructionFetcherCircuit-Step-{globalStepCounter}", executorWrapper.GetR1csCircuitWithValues());
 
                 stepEndTimes[stepTimerName] = DateTimeOffset.Now;
             }
@@ -399,7 +408,7 @@ public class ZkProgramExecutor {
                 }
 
                 // save r1cs circuit with value shares for verification
-                this.OnR1csCircuitWithValuesGenerated.Report(($"ZkVmCircuit-Step-{globalStepCounter}", executorWrapper.GetR1csCircuitWithValues()));
+                RaiseR1csCircuitWithValuesGenerated($"ZkVmCircuit-Step-{globalStepCounter}", executorWrapper.GetR1csCircuitWithValues());
 
                 stepEndTimes[stepTimerName] = DateTimeOffset.Now;
 
@@ -574,12 +583,15 @@ public class ZkProgramExecutor {
             }
 
             // save r1cs circuit with value shares for verification
-            this.OnR1csCircuitWithValuesGenerated.Report(($"MemoryTraceProverCircuit-{traceCount}", executorWrapper.GetR1csCircuitWithValues()));
+            RaiseR1csCircuitWithValuesGenerated($"MemoryTraceProverCircuit-{traceCount}", executorWrapper.GetR1csCircuitWithValues());
 
             stepEndTimes[stepTimerName] = DateTimeOffset.Now;
         }
 
         DateTimeOffset totalEndTime = DateTimeOffset.Now;
+
+        // Wait for remaining tasks
+        Task.WaitAll(onR1csCircuitWithValuesGeneratedTasks.ToArray());
 
         return new ZkProgramExecuteResult() {
             GlobalStepCounter = globalStepCounter,

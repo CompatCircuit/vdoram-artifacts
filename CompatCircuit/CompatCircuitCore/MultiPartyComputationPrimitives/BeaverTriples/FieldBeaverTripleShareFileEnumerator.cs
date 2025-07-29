@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 public class FieldBeaverTripleShareFileEnumerator : ArithFactoryBinaryDecodableFileEnumerator<FieldBeaverTripleShare, Field> {
     public FieldBeaverTripleShareFileEnumerator(Stream stream, IArithFactory<Field> factory) : base(stream, factory) { }
 }

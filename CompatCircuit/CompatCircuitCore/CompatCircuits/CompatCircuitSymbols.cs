@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public class CompatCircuitSymbols {
     public required string CircuitName { get; init; }
     public required IReadOnlyList<CompatCircuitWireSymbol> CircuitWireSymbols { get; init; }

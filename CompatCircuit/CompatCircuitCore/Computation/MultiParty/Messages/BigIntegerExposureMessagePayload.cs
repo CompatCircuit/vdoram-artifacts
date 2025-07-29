@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers.Binary;
 using System.Diagnostics;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public class BigIntegerExposureMessagePayload(string exposureKey, int shareOwnerID, IEnumerable<BigInteger> values) : IMessagePayload<BigIntegerExposureMessagePayload> {
     public static byte MessagePayloadTypeID => (byte)MessagePayloadType.BigIntegerExposure;
 

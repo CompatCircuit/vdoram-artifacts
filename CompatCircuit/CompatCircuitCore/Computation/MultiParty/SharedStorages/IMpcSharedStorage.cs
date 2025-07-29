@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 public interface IMpcSharedStorage {
     public int SessionID { get; }
 

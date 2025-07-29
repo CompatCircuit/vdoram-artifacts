@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.SerilogHelpers;
+﻿using Anonymous.CompatCircuitCore.SerilogHelpers;
 using Serilog;
-using Startup = SadPencil.CollaborativeZkVm.Startup;
+using Startup = Anonymous.CollaborativeZkVm.Startup;
 
-namespace SadPencil.CollaborativeZkVmTest;
+namespace Anonymous.CollaborativeZkVmTest;
 
 [TestClass]
 public static class TestStartup {

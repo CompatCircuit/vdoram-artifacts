@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Extensions;
 using System.Collections;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.RandomGenerators;
+namespace Anonymous.CompatCircuitCore.RandomGenerators;
 public static class RandomHelper {
     public static BitArray RandomBits(int bitCount, RandomGeneratorRef random) => RandomBits(bitCount, random.Value);
     public static BitArray RandomBits(int bitCount, IRandomGenerator random) {

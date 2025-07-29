@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitProgramming.CircuitElements;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class FieldLessThanGadget : IGadget {
     public List<string> GetInputWireNames() => ["left", "right"];
     public List<string> GetOutputWireNames() => ["is_less_than"];

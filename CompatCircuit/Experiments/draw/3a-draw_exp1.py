@@ -231,7 +231,7 @@ if __name__ == "__main__":
         # Set x-axis to be text
         ax.set_xticks(range(len(x_values)))
         ax.set_xticklabels(x_values)
-        ax.set_xlabel("Party count")
+        ax.set_xlabel("Prover count")
 
         # Adding y-axis label
 
@@ -363,7 +363,7 @@ if __name__ == "__main__":
         ax.set_ylim(mean_min / 2, mean_max * 2)
 
         # Set the y-axis to log scale
-        ax.set_yscale("log", base=2)
+        ax.set_yscale("log", base=10)
 
     # Adjust layout for better fit and visibility
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])

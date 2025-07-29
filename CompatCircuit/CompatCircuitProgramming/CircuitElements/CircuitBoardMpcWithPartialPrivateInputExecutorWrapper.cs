@@ -1,11 +1,11 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitProgramming.CircuitElements;
+namespace Anonymous.CompatCircuitProgramming.CircuitElements;
 public class CircuitBoardMpcWithPartialPrivateInputExecutorWrapper : CircuitBoardExecutorWrapperBase<Field> {
     protected MpcExecutor CircuitExecutor { get; }
 

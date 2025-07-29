@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
 
-namespace SadPencil.CollaborativeZkVm.ZkPrograms;
+namespace Anonymous.CollaborativeZkVm.ZkPrograms;
 public class ZkProgramInstance : ZkProgram {
     public required int MyID { get; init; }
     public required int PartyCount { get; init; }

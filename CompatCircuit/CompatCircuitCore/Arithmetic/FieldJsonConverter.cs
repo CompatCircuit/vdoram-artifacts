@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SadPencil.CompatCircuitCore.Arithmetic;
+namespace Anonymous.CompatCircuitCore.Arithmetic;
 public class FieldJsonConverter(BigInteger fieldSize) : JsonConverter<Field> {
     public BigInteger FieldSize { get; } = fieldSize;
 

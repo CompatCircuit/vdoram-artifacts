@@ -1,6 +1,6 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
 public interface IMessagePayload<T> : IBinaryEncodable, IGeneralBinaryDecodable<T> where T : IMessagePayload<T> {
     public static abstract byte MessagePayloadTypeID { get; }
 }

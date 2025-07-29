@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits.MpcCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits.MpcCircuits;
 public class MpcCircuit : CompatCircuit {
     public MpcCircuit() { }
 

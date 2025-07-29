@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers.Binary;
 using System.Collections;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
 public class BoolBeaverTripleShareList : List<BoolBeaverTripleShare>, IBinaryEncodable, IGeneralBinaryDecodable<BoolBeaverTripleShareList> {
     public int GetEncodedByteCount() => sizeof(int) + BitArrayHelper.BitCountToByteCount(3 * this.Count);
     public void EncodeBytes(Span<byte> destination, out int bytesWritten) {

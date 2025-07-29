@@ -1,11 +1,11 @@
-﻿using SadPencil.CompatCircuitCore.Computation.MultiParty.Messages;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.Computation.MultiParty.Messages;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 public class MpcSharedStorage : IMpcSharedStorage, IDisposable {
     public int SessionID { get; }
     public int PartyCount { get; }

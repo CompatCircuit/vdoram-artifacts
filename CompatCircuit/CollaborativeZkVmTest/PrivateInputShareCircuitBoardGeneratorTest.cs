@@ -1,17 +1,17 @@
-﻿using SadPencil.CollaborativeZkVm.ZkVmCircuits;
-using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits;
-using SadPencil.CompatCircuitCore.Computation.MultiParty;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.Network;
-using SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
-using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CollaborativeZkVm.ZkVmCircuits;
+using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits;
+using Anonymous.CompatCircuitCore.Computation.MultiParty;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.Network;
+using Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.BeaverTriples;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.DaBitPrioPlus;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CollaborativeZkVmTest;
+namespace Anonymous.CollaborativeZkVmTest;
 [TestClass]
 public class PrivateInputShareCircuitBoardGeneratorTest {
     [TestMethod]
@@ -28,7 +28,7 @@ public class PrivateInputShareCircuitBoardGeneratorTest {
         int partyCount = privateInputPlaintextsOwnedByParties.Count;
 
         // Prepare circuit
-        CircuitBoard privateInputSharingCircuitBoard = new PrivateInputShareCircuirBoardGenerator(privateInputCount).GetCircuitBoard().Optimize();
+        CircuitBoard privateInputSharingCircuitBoard = new PrivateInputShareCircuitBoardGenerator(privateInputCount).GetCircuitBoard().Optimize();
         CircuitBoardConverter.ToCompatCircuit(privateInputSharingCircuitBoard, "PrivateInputSharingCircuit", out CompatCircuit? privateInputSharingCompatCircuit, out CompatCircuitSymbols? privateInputSharingCompatCircuitSymbols);
 
         // Prepare MPC

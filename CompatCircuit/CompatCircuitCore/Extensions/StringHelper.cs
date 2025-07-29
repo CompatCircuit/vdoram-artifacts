@@ -2,7 +2,7 @@
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Extensions;
+namespace Anonymous.CompatCircuitCore.Extensions;
 public static class StringHelper {
     public static string ToLiteral(this string input) =>
         // https://stackoverflow.com/a/55798623

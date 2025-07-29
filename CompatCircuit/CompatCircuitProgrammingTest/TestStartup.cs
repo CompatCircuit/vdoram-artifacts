@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.SerilogHelpers;
+﻿using Anonymous.CompatCircuitCore.SerilogHelpers;
 using Serilog;
-using Startup = SadPencil.CompatCircuitProgramming.Startup;
+using Startup = Anonymous.CompatCircuitProgramming.Startup;
 
-namespace SadPencil.CompatCircuitProgrammingTest;
+namespace Anonymous.CompatCircuitProgrammingTest;
 
 [TestClass]
 public static class TestStartup {

@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Extensions;
+﻿namespace Anonymous.CompatCircuitCore.Extensions;
 public static class IEnumeratorHelper {
     public static IEnumerable<T> AsEnumerable<T>(this IEnumerator<T> enumerator) {
         while (enumerator.MoveNext()) {

@@ -1,19 +1,18 @@
-﻿using SadPencil.CollaborativeZkVm.ZkPrograms;
-using SadPencil.CollaborativeZkVm.ZkPrograms.Examples;
-using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
-using SadPencil.CompatCircuitCore.Computation;
-using SadPencil.CompatCircuitCore.Computation.SingleParty;
-using SadPencil.CompatCircuitCore.Extensions;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CollaborativeZkVm.ZkPrograms;
+using Anonymous.CollaborativeZkVm.ZkPrograms.Examples;
+using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
+using Anonymous.CompatCircuitCore.Computation;
+using Anonymous.CompatCircuitCore.Computation.SingleParty;
+using Anonymous.CompatCircuitCore.Extensions;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 
-namespace SadPencil.CollaborativeZkVmTest;
+namespace Anonymous.CollaborativeZkVmTest;
 
 [TestClass]
 public class ZkProgramExamplesTest {
     private static async Task TestZkProgramWithMemoryTrace(
-        ZkProgram program, IReadOnlyList<Field> publicInputs, IReadOnlyList<Field> privateInputs, IReadOnlyList<Field> expectedOutputs,
-        int globalStepNoMoreThan, int regCount = 16) {
+        ZkProgram program, IReadOnlyList<Field> publicInputs, IReadOnlyList<Field> privateInputs, IReadOnlyList<Field> expectedOutputs, int globalStepNoMoreThan) {
 
         ZkProgramInstance zkProgramInstance = new() {
             MyID = 0,
@@ -26,15 +25,22 @@ public class ZkProgramExamplesTest {
 
         IMpcExecutorFactory mpcExecutorFactory = new SingleExecutorFactory();
 
+        int r1csVerifyCount = 0;
+        int expectedR1csVerifyCount = (2 * zkProgramInstance.Opcodes.Count) + 1; // TODO: make it abstract from ZkProgramExecutor implementation
+
         ZkProgramExecutor zkProgramExecutor = new() {
             ZkProgramInstance = zkProgramInstance,
             MyID = 0,
             MpcExecutorFactory = mpcExecutorFactory,
             IsSingleParty = true,
-            OnR1csCircuitWithValuesGenerated = new Progress<(string, R1csCircuitWithValues)>(arg => {
-                (string name, R1csCircuitWithValues r1cs) = arg;
+            OnR1csCircuitWithValuesGeneratedAsync = (string name, R1csCircuitWithValues r1cs) => {
                 r1cs.SelfVerify();
-            }),
+
+                // There might be a time-consuming file writing operation. Simulate it.
+                Thread.Sleep(TimeSpan.FromSeconds(4)); // 4 seconds.
+
+                _ = Interlocked.Increment(ref r1csVerifyCount);
+            },
         };
 
         ZkProgramExecuteResult result = await zkProgramExecutor.Execute();
@@ -44,6 +50,7 @@ public class ZkProgramExamplesTest {
 
         Assert.AreEqual(expectedOutputs.Count, result.PublicOutputs.Count);
         Assert.IsTrue(expectedOutputs.SequenceEqual(result.PublicOutputs));
+        Assert.AreEqual(expectedR1csVerifyCount, r1csVerifyCount);
     }
 
     [TestMethod]
@@ -69,6 +76,17 @@ public class ZkProgramExamplesTest {
         List<Field> sortedArray = array.OrderBy(x => x.Value).ToList();
         List<Field> publicInputs = [ArithConfig.FieldFactory.New(array.Count)];
         await TestZkProgramWithMemoryTrace(program, publicInputs, privateInputs: array, expectedOutputs: sortedArray, globalStepNoMoreThan: program.Opcodes.Count * array.Count * array.Count);
+    }
+
+    [TestMethod]
+    public async Task TestDivideByTwoZkProgram() {
+        ZkProgram program = new DivideByTwoProgramGenerator().GetZkProgram();
+        Field input = ArithConfig.FieldFactory.Random();
+        Field expectedOutput = ArithConfig.FieldFactory.New(input.Value / 2);
+        List<Field> publicInputs = [];
+        List<Field> privateInputs = [input];
+        List<Field> expectedOutputs = [expectedOutput];
+        await TestZkProgramWithMemoryTrace(program, publicInputs, privateInputs, expectedOutputs, globalStepNoMoreThan: program.Opcodes.Count);
     }
 
     [TestMethod]

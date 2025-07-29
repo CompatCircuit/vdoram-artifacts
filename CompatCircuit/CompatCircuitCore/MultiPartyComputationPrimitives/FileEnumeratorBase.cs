@@ -1,10 +1,10 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.Extensions;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.Extensions;
 using System.Buffers.Binary;
 using System.Collections;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 public abstract class FileEnumeratorBase<T> : IDisposable, ICountingEnumerator<T> where T : IBinaryEncodable {
     protected const byte HaveNext = 114;
     public static void AppendToStream(Stream stream, T value) {

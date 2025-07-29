@@ -1,8 +1,8 @@
-﻿using SadPencil.CompatCircuitCore.BinarySerialization;
+﻿using Anonymous.CompatCircuitCore.BinarySerialization;
 using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty.Network.NetMessages;
 public class NetRawMessage : IBinaryEncodable, IGeneralBinaryDecodable<NetRawMessage> {
     public required int MessageID { get; init; }
     public required int SenderID { get; init; }

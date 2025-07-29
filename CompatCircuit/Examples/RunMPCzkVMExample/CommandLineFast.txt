@@ -1,0 +1,5 @@
+Anonymous.CompatCircuitCore gen-preshared --directory . --parties 2 --field-beaver-triples 10 --bool-beaver-triples 10 --edaBits-pair 10 --daBitPrioPlus-pair 10
+
+Anonymous.CollaborativeZkVm run-mpc-zkvm --config MpcConfig.0.json --program-instance NumberComparison.instance.0.json --field-beaver FieldBeaver.0.bin --bool-beaver BoolBeaver.0.bin --edaBits edaBits.0.bin --daBitPrioPlus daBitPrioPlus.0.bin --output-folder . --unsafe-repeat-preshared
+
+Anonymous.CollaborativeZkVm run-mpc-zkvm --config MpcConfig.1.json --program-instance NumberComparison.instance.1.json --field-beaver FieldBeaver.1.bin --bool-beaver BoolBeaver.1.bin --edaBits edaBits.1.bin --daBitPrioPlus daBitPrioPlus.1.bin --output-folder . --unsafe-repeat-preshared

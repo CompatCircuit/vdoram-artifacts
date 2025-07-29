@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text.Json.Serialization;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty;
 public class MpcConfig {
     public required IReadOnlyList<IPAddress> PartyIPAddresses { get; init; }
     public required IPAddress MyIPAddress { get; init; }

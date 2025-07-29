@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.GlobalConfig;
-using SadPencil.CompatCircuitProgramming.CircuitElements;
+﻿using Anonymous.CompatCircuitCore.GlobalConfig;
+using Anonymous.CompatCircuitProgramming.CircuitElements;
 
-namespace SadPencil.CompatCircuitProgramming.Gadgets;
+namespace Anonymous.CompatCircuitProgramming.Gadgets;
 public class BitDecompositionGadget : IGadget {
     public List<string> GetInputWireNames() => ["input"];
     public List<string> GetOutputWireNames() => Enumerable.Range(0, ArithConfig.BitSize).Select(i => $"bit_{i}").ToList();

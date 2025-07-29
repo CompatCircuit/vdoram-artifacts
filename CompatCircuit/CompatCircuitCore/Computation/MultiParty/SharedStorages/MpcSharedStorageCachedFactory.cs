@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.Computation.MultiParty.SharedStorages;
+﻿namespace Anonymous.CompatCircuitCore.Computation.MultiParty.SharedStorages;
 /// <summary>
 /// This factory caches and returns the same MpcSharedStorage object for an existing session ID.
 /// Made primarily for unit tests where a MpcSharedStorage needs to be shared among multiple MPC executors.

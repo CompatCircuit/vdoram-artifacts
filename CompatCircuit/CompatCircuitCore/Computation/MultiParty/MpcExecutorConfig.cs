@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace SadPencil.CompatCircuitCore.Computation.MultiParty;
+namespace Anonymous.CompatCircuitCore.Computation.MultiParty;
 public class MpcExecutorConfig {
     public required int MyID { get; init; }
     public required int PartyCount { get; init; }

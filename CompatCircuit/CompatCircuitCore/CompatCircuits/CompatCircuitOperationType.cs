@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public enum CompatCircuitOperationType : byte {
     Addition,
     Multiplication,

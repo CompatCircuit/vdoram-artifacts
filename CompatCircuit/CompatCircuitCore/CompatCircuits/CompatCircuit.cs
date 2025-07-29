@@ -1,13 +1,13 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.BinarySerialization;
-using SadPencil.CompatCircuitCore.GlobalConfig;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.BinarySerialization;
+using Anonymous.CompatCircuitCore.GlobalConfig;
 using System.Buffers.Binary;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits;
 public class CompatCircuit : IEquatable<CompatCircuit>, IArithFactoryBinaryDecodable<CompatCircuit, Field>, IBinaryEncodable {
     /// <summary>
     /// Wires whose ID is between [0, ReservedWireConstantCount) are reserved: 

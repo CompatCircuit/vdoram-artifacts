@@ -1,9 +1,9 @@
-﻿using SadPencil.CompatCircuitCore.Arithmetic;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
-using SadPencil.CompatCircuitCore.RandomGenerators;
+﻿using Anonymous.CompatCircuitCore.Arithmetic;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.SecretSharing;
+using Anonymous.CompatCircuitCore.RandomGenerators;
 using System.Diagnostics;
 
-namespace SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
+namespace Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives.EdaBitsKai;
 public class EdaBitsKaiGenerator {
     public FieldFactory BaseFieldFactory { get; }
     public FieldSecretSharing BaseFieldSecretSharing { get; }

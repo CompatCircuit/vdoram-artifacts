@@ -1,4 +1,4 @@
-﻿namespace SadPencil.CompatCircuitCore.CompatCircuits;
+﻿namespace Anonymous.CompatCircuitCore.CompatCircuits;
 /// <summary>
 /// Contains auxiliary information about a wire in a circuit
 /// </summary>

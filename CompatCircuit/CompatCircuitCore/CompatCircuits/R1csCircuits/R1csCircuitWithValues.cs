@@ -1,7 +1,7 @@
-﻿using SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits.Exceptions;
-using SadPencil.CompatCircuitCore.MultiPartyComputationPrimitives;
+﻿using Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits.Exceptions;
+using Anonymous.CompatCircuitCore.MultiPartyComputationPrimitives;
 
-namespace SadPencil.CompatCircuitCore.CompatCircuits.R1csCircuits;
+namespace Anonymous.CompatCircuitCore.CompatCircuits.R1csCircuits;
 public class R1csCircuitWithValues : R1csCircuit {
     public required IReadOnlyList<MpcValue> WireValues { get; init; }
 
