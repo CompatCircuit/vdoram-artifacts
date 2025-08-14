@@ -2,6 +2,8 @@
 
 This repository contains artifacts for the paper 'VDORAM'. These artifacts are currently provided anonymously, exclusively for peer review purposes. The authors, who remain anonymous due to submission guidelines, will publicly release these artifacts with their identities following the completion of the review process.
 
+Moved to https://github.com/BDS-SDU/vdoram-artifacts
+
 ## LICENSE.md
 
 The license file for the anonymous artifacts.
